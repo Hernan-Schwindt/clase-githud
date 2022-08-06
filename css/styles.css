@@ -1,0 +1,432 @@
+/*aplicamos reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #222;
+}
+/*header*/
+.header{
+    background-color: #123;
+    position: sticky;
+    top: 0;
+    
+    z-index: 10;
+}
+.header__home{
+    display: inline-block ;
+}
+header nav form{
+    display: inline-block;
+    margin-left: 380px;
+    margin-right: 50px;
+    padding-bottom: 5px;
+}
+.header__home a{
+    text-decoration: none;
+    color: rgb(21, 97, 168);
+}
+.header nav ul a {
+    text-decoration: none;
+    color: rgb(21, 97, 168);
+}
+.header h1 a b {
+    display: inline-block;
+    padding-left: 5px;
+    margin: 8px;
+    font-size: 23px;
+}
+header nav ul{
+    display: inline-block;
+}
+header nav ul li {
+    text-decoration: none;
+    display: inline-block;
+   
+}
+header nav {
+    display: inline-block;
+}
+.header form input{
+    display: inline-block;
+    padding: 5px ;
+    right: 280px;
+    
+}
+.header__buscador{
+    display: inline-block ;
+}
+.header__contacto{
+    right: 5px;
+    
+}
+.header__usuario{
+    right: 150px;
+    padding-right: 80px;
+}
+
+.header__biblioteca{
+    /*right: 280px;*/
+    padding-left: 10px;
+}
+                        /*todo el aside*/
+.aside{
+    position: absolute;
+    width: 350px ;
+    top: 100px;
+    right: 15px;
+    
+}
+main .aside div .aside__chat-web{
+    background-color: #234;
+    height: 400px;
+
+}
+main .aside .aside__chat-web h2{
+    background-color: #123;
+    text-align: center;
+    font-size: 21px ;
+    color: rgb(21, 97, 168);
+    text-shadow: 1px 1px 4px rgb(17, 80, 138) ;
+    width: 350px;
+}
+main .aside div .aside__chat-web div{
+    position: absolute;
+    background-color: #fff;
+    width: 330px ;
+    height: 320px ;
+    right: 10px;
+}
+main .aside div .aside__chat-web div form{
+    position: absolute;
+    top: 335px;
+    left: 12px;
+}
+main .aside .aside__chat-web div form .text{
+    width: 270px;
+    padding: 5px;
+}
+
+main .aside__discord{
+    background-color: #5865f2;
+    height: 56px;
+}
+main .aside__discord div h3 {
+    text-align: center;
+    padding-top: 11px ;
+}
+main .aside__discord div h3 a{
+    text-decoration: none;
+}
+main .aside__discord div h3 a{
+    color: #fff;
+    font-size: 32px;
+    
+}
+main .aside__discord div span{
+    color: #fff;
+    font-size: 15px;
+    padding-left: 32px ;
+}
+main .aside__discord div div{
+    width: 350px ;
+    height: 300px ;
+    background-color: #123 ;
+    opacity: 12px;
+}
+.aside__top-10{
+    padding-top: 280px;
+}
+main .aside__top-10 div{
+    background-color: #234;
+}
+.uno{
+    color: gold;
+}
+.aside__top-10__n{
+    background-color: rgba(7, 46, 221, 0.966);
+    color: #000;
+    display: inline-block;
+    padding-left: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+}
+main .aside__top-10 div div div{
+    text-align: center;
+}
+main .aside__top-10 h2{
+    background-color: rgb(0, 48, 100);
+    text-align: center;
+}
+main .aside .aside__top-10 div b a{
+    color: rgb(21, 97, 168);
+    text-decoration: none;
+}
+
+
+
+
+                                /*todo main*/
+.img-box{
+    margin-top: 57px;
+}
+.manga{
+    margin-left: 10px;
+    margin-bottom: 25px;
+    
+    background-color: #1550ce;
+    display: inline-block;
+    width: 960px;
+}
+.manga div{
+    padding: 5px;
+    display: inline-block;
+}
+
+.manga h3 {
+    text-align: center;
+    background-color: #002066;
+    
+}
+                   /*footer*/
+footer{
+    background-color: #123;
+    height: 70px
+}
+footer .siguenos{
+    /*position: absolute;*/
+    text-align: center;
+    
+}
+footer .small{
+    background-color: rgb(0, 71, 143);
+    text-align: center;
+    height: 18px;
+    /*padding-top: 50px;*/
+    
+}
+footer .small small{
+    text-align: center;
+}
+footer div .siguenos nav ul li{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    text-align: center ;
+}
+footer div .siguenos nav ul li a{
+    color: deepskyblue;
+    text-decoration: none;
+
+}
+footer div .siguenos{
+    right: 640px;
+
+}
+                 /*section*/
+section{
+    background-color: #1550ce;
+    width: 970px;
+    margin-left: 5px;
+}
+section h4{
+    background-color: #002066 ;
+    text-align: center;
+    font-size: 25px;
+}
+section div{
+    display: inline-block;
+    padding: 4px;
+}
+section div .chaman img{
+    width: 469px ;
+    height: 572px ;
+}
+section div .eva img{
+    width: 469px ;
+    height: 572px ;
+}
+section div .cora img{
+    width: 450px ;
+    height: 450px ;
+}
+section div iframe{
+    width: 500px ;
+    height: 315px ;
+}
+                     /*biblioteca*/
+/*main*/
+.main-biblioteca__flex{
+    display: flex;
+    align-items: flex-start;
+}
+.main-biblioteca__form{
+    background-color: #003ec5;
+    height: 45px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+
+}
+main div .main-biblioteca__form input{
+    margin-top: 8px;
+}
+.main-biblioteca__form__buscador{
+    width: 500px;
+    height: 30px;
+    font-size: 18px;
+    margin-left: 10px;
+}
+.main-biblioteca__form__enviar{
+    padding: 6px;
+}
+.biblioteca-box{
+    display: inline-block;
+    margin-top: 0px;
+}
+.main-biblioteca__aside{
+    background-color: aqua;
+    display: inline-block;
+    width: 350px;
+    margin-top: 0px;
+    margin-left: 10px;
+}
+.siguiente-biblioteca{
+    margin-left: 830px;
+} 
+                             /*capitulo-01*/
+/*main*/
+main .cap-t{
+    background-color: #5865f2;
+    text-align: center;
+}
+main .cap-t h2{
+    color: #000;
+}
+main .cap-t h3 span{
+    color: rgb(0, 0, 255);
+}
+main .cap-img img{
+    width: 100%;
+}
+main .siguiente-cap{
+    background-color: #1550ce;
+    padding: 5px;
+    height: 30px;
+}
+.anterior-buttom{
+    margin-left: 10px;
+}
+.siguiente-buttom{
+    margin-left: 1200px;
+}
+              /*teles of demos ad gods*/
+/*main*/
+main .tales-of-demons-and-gods{
+    display: flex ; 
+    flex-wrap: nowrap;  
+    background-color: #194094; 
+}
+main .tales-of-demons-and-gods div h4{
+    background-color: #0051ff8e;
+    width: 300px;
+    position: absolute;
+    text-align: center;
+}
+.img-manhua{
+    padding: 8px;
+}
+.historia-manhua{
+    background-color: #5865f2cc;
+    padding: 8px ;
+    
+    
+}
+main .tales-of-demons-and-gods div h2{
+    background-color: rgba(137, 43, 226, 0.726);
+    text-align: center;
+}
+main .tales-of-demons-and-gods div p{
+    background-color: rgba(45, 45, 255, 0.822);
+}
+.capitulos-manhua{
+    background-color: #2051b9;
+    overflow: auto;
+    width: 900px;
+    height: 500px;
+    margin: 5px;
+}
+main .capitulos-manhua h3{
+    background-color: rgba(137, 43, 226, 0.726) ;
+    text-align: center;
+}
+main .capitulos-manhua div ul li{
+    background-color: #2631a5;
+    margin: 3px;
+    
+}
+main .capitulos-manhua div ul li a{
+    font-size: 22px;
+    color: #000;
+    text-decoration: none;
+}
+.aside-manhua{
+    margin-top: 420px;
+}
+                        /*formulario*/
+/*main*/
+
+.mein-form .main-form__flex{
+    display: flex;
+    justify-content: center;
+  
+}
+.mein-form .main-form__flex div .formulario fieldset{
+    text-align: center;
+}
+.mein-form .main-form__flex div .formulario fieldset h2{
+   text-align: center;
+   margin-top: 25px;
+   margin-bottom: 10px;
+}
+.apellido-nombre{
+    margin-bottom: 5px;
+}
+
+.text-asunto{
+    margin-left: -10px;
+    margin-top: 5px ;
+    margin-bottom: 5px;    
+}
+.mein-form .main-form__flex div .formulario fieldset .mail .text-asunto textarea{
+    width: 350px;
+}
+.form-enviar{
+    margin-left: 300px  ;
+    margin-bottom: 20px;
+}
+main div .formulario fieldset{
+    background-color: #1745aa;
+    width: 500px;
+    /*height: 350px;*/
+}
+.mein-form .main-form__flex div .formulario fieldset .mail input{
+    margin-left: -90px;
+}
+.mein-form .main-form__flex div .formulario fieldset .genero {
+    margin-left: -200px;
+    
+}
+.mein-form .main-form__flex div .formulario fieldset .mail .password {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 95px;
+}
+.mein-form .main-form__flex div .formulario fieldset .mail .password .repetir-password{
+    margin-left: 5px;
+}
+.box-form{
+    height: 250px;
+}
