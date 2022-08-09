@@ -10,22 +10,28 @@
     <title>USUARIO</title>
 </head>
 
-<body>
+<body class="biblioteca-body">
     <header class="header">
-        <h1 class="header__home"><a href="../index.html">
-                <b>TU LECTOR DE <i>MANGA</i></b>
-            </a></h1>
+        <div>
+            <h1 class="header__home"><a href="../index.html">
+                    <b>TU LECTOR DE <i>MANGA</i></b>
+                </a></h1>
+            <nav>
+                <ul>
+                    <li class="header__biblioteca">
+                        <a href="biblioteca.html">
+                            <b>BIBLIOTECA</b>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
         <nav>
-            <ul>
-                <li class="header__biblioteca">
-                    <a href="biblioteca.html">
-                        <b>BIBLIOTECA</b>
-                    </a>
-                </li>
-            </ul>
             <form action="">
                 <input type="text" placeholder="buscar" class="header__buscador">
             </form>
+        </nav>
+        <nav>
             <ul>
                 <li class="header__usuario">
                     <a href="usuario.html">
@@ -51,7 +57,7 @@
         <div class="main-biblioteca__flex">
             <div class="main-biblioteca__aside">
                 <div>
-                    <h4>Filtro</h4>
+                    <h4 class="main-biblioteca__aside__h4">Filtro</h4>
                     <div>
                         <!--quiero q diltre y muestre los q elija-->
                         <label for="">Tipo</label>
@@ -82,7 +88,7 @@
                 </div>
                 <div>
                     <div>
-                        <h4>Genero</h4>
+                        <h4 class="main-biblioteca__aside__h4">Genero</h4>
                         <!--quiero que filtre y muestre los q elija y q 
                 se bra como una barra acia bajo cuando lo criqueo
             -->
@@ -109,7 +115,7 @@
 
                     </div>
                     <div>
-                        <h4>Excluir Genero</h4>
+                        <h4 class="main-biblioteca__aside__h4">Excluir Genero</h4>
                         <!--quiero que filtre y muestre los q elija y q 
                 se bra como una barra acia bajo cuando lo criqueo
                 -->
@@ -138,11 +144,11 @@
             </div>
             <div class="biblioteca-box">
                 <div>
-                    <div class="manga">
+                    <div class="manga biblioteca-flex">
 
                         <h3><b> BIBLIOTECA </b></h3>
                         <div>
-                            <div>
+                            <div class="manga-flex">
                                 <div>
                                     <a href="tales-of-demons-and-gods.html">
                                         <img src="https://otakuteca.com/images/books/cover/12956_TMOManga57fa9df9891b2.jpg"

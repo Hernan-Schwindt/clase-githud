@@ -10,22 +10,28 @@
     <title>form-contacto</title>
 </head>
 
-<body>
+<body class="form-grid">
     <header class="header">
-        <h1 class="header__home"><a href="../index.html">
-                <b>TU LECTOR DE <i>MANGA</i></b>
-            </a></h1>
+        <div>
+            <h1 class="header__home"><a href="../index.html">
+                    <b>TU LECTOR DE <i>MANGA</i></b>
+                </a></h1>
+            <nav>
+                <ul>
+                    <li class="header__biblioteca">
+                        <a href="biblioteca.html">
+                            <b>BIBLIOTECA</b>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
         <nav>
-            <ul>
-                <li class="header__biblioteca">
-                    <a href="biblioteca.html">
-                        <b>BIBLIOTECA</b>
-                    </a>
-                </li>
-            </ul>
             <form action="">
                 <input type="text" placeholder="buscar" class="header__buscador">
             </form>
+        </nav>
+        <nav>
             <ul>
                 <li class="header__usuario">
                     <a href="usuario.html">
@@ -41,16 +47,16 @@
             </ul>
         </nav>
     </header>
-    <main class="mein-form">
-        
+    <main >
+        <section class="mein-form">
             <div class="main-form__flex">
-                <div>
+                <div class="form-center">
                     <form action="" id="formulario" class="formulario">
                         <fieldset>
                             <h2><b>FORMULARIO DE CONTACTOS</b></h2>
                             <div class="apellido-nombre">
                                 <input type="text" placeholder="NOMBRES">
-                    
+
                                 <input type="text" placeholder="APELLIDO">
                             </div>
                             <div class="genero">
@@ -70,7 +76,8 @@
                                     <option value="españa">españa</option>
                                 </select>
                                 <div class="text-asunto">
-                                    <textarea name="" id="" cols="30" rows="10" placeholder="escriba su asunto"></textarea>
+                                    <textarea name="" id="" cols="30" rows="10"
+                                        placeholder="escriba su asunto"></textarea>
                                 </div>
                             </div>
                             <input type="submit" name="" id="" class="form-enviar">
@@ -78,7 +85,8 @@
                     </form>
                 </div>
             </div>
-        
+        </section>
+
     </main>
     <footer>
         <div>
