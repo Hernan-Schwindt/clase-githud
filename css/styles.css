@@ -10,15 +10,16 @@ body {
     display: grid;
     align-items: start;
     grid-template-areas: "header header"
-                         "main aside"
-                         "ultima aside"
-                         "memes aside"
-                         "footer footer"
+        "main aside"
+        "ultima aside"
+        "memes aside"
+        "footer footer"
     ;
     /*grid-template-columns: 1fr 1fr ;
     grid-template-rows: repeat(5,1fr);*/
 
 }
+
 /*header*/
 .header {
     background-color: #123;
@@ -241,7 +242,8 @@ main {
     margin-top: 57px;
 
 }
-.grid-ultimo{
+
+.grid-ultimo {
     grid-area: ultima;
 }
 
@@ -338,9 +340,10 @@ footer div .siguenos {
 }
 
 /*section*/
-.meme-grid{
+.meme-grid {
     grid-area: memes;
 }
+
 section .memes {
     background-color: #1550ce;
     /*width: 970px;*/
@@ -348,10 +351,11 @@ section .memes {
     /*grid-area: memes;*/
     /*grid-column: 1/2;*/
 }
-.memes-flex{
+
+.memes-flex {
     display: grid;
     grid-template-areas: "chaman eva"
-                         "cora video"
+        "cora video"
     ;
 
 }
@@ -371,18 +375,20 @@ section .memes div .chaman img,
 section .memes div .eva img {
     /*width: 439px;*/
     width: 100%;
-    
+
 }
-.chaman{
+
+.chaman {
     grid-area: chaman;
 }
-.eva{
+
+.eva {
     grid-area: eva;
 }
 
 section .memes div .cora img {
     /*width: 450px;*/
-    
+
     width: 100%;
     grid-area: cora;
 }
@@ -395,20 +401,22 @@ section .memes div iframe {
 }
 
 /*biblioteca*/
-.biblioteca-body{
-    
+.biblioteca-body {
+
     grid-template-areas: "header header"
-                         "main main"
-                         "footer footer"
+        "main main"
+        "footer footer"
     ;
 
 
 
 }
+
 /*main*/
-.biblioteca-flex{
+.biblioteca-flex {
     width: 100%;
 }
+
 .main-biblioteca__flex {
     display: flex;
     flex-wrap: nowrap;
@@ -451,9 +459,10 @@ main div .main-biblioteca__form input {
     width: 100%;
     margin-top: 0px;
     margin-left: 10px;
-    grid-area: aside-biblioteca ;
+    grid-area: aside-biblioteca;
 }
-.main-biblioteca__aside__h4{
+
+.main-biblioteca__aside__h4 {
     text-align: center;
     background-color: #002066;
     width: 180px;
@@ -478,9 +487,11 @@ main .cap-t h2 {
 main .cap-t h3 span {
     color: rgb(0, 0, 255);
 }
-.cap-img{
+
+.cap-img {
     width: 100%;
 }
+
 /*.cap-img-body{
     width: 20%;
 }*/
@@ -568,13 +579,14 @@ main .capitulos-manhua div ul li a {
 
 /*formulario*/
 /*main*/
-.form-grid{
+.form-grid {
     display: grid;
     min-height: 100vh;
     grid-template-rows: auto 1fr auto;
 
 }
-.mein-form{
+
+.mein-form {
     display: flex;
     align-items: center;
     width: 100%;
@@ -584,13 +596,13 @@ main .capitulos-manhua div ul li a {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    /*margin-top: 100px;*/   
-    
+    /*margin-top: 100px;*/
+
     margin: 0 auto;
 }
-.form-center{
-    margin: auto
-    ;
+
+.form-center {
+    margin: auto;
 }
 
 .mein-form .main-form__flex div .formulario fieldset {
@@ -650,78 +662,90 @@ main div .formulario fieldset {
 .box-form {
     height: 250px;
 }
-                                  /*mediaqueri*/
+
+/*mediaqueri*/
 /*home*/
-@media screen and (max-width:480px){
-    .home-body{
-        
+@media screen and (max-width:480px) {
+    .home-body {
+
         background-color: #000;
         grid-template-areas: "header header"
-                             "main main"
-                             "ultima ultima"
-                             "memes memes"
-                             "aside aside"
-                             "footer footer"
-    ;
-    
+            "main main"
+            "ultima ultima"
+            "memes memes"
+            "aside aside"
+            "footer footer"
+        ;
+
     }
-    
-    
-    .header{
+
+
+    .header {
         flex-direction: column;
     }
-    .manga-flex{
+
+    .manga-flex {
         padding: 0px;
     }
-    .manga{
+
+    .manga {
         height: 1033px;
         overflow: hidden;
     }
-    .manga div div div{
+
+    .manga div div div {
         width: 50%;
     }
-    .aside-height{
+
+    .aside-height {
         display: flex;
         justify-content: center;
     }
-    header nav form{
+
+    header nav form {
         margin-left: 0;
     }
 }
+
 /*biblioteca*/
 @media screen and (max-width:480px) {
-    .biblioteca-body{
+    .biblioteca-body {
         background-color: #ff00ea;
         width: 480px;
-        
-    }
-    .main-biblioteca{
-        display: grid;
-    align-items: start;
-    width: 100%;
-        grid-template-areas: "aside-buscador aside-buscador"
-                             
-                             "main-biblioteca main-biblioteca"
 
     }
-    .biblioteca-flex{
+
+    .main-biblioteca {
+        display: grid;
+        align-items: start;
+        width: 100%;
+        grid-template-areas: "aside-buscador aside-buscador"
+
+            "main-biblioteca main-biblioteca"
+
+    }
+
+    .biblioteca-flex {
         height: 3418px;
     }
-    .manga div div div{
+
+    .manga div div div {
         width: 50%;
     }
-    
-    .main-biblioteca__aside{
+
+    .main-biblioteca__aside {
         text-align: center;
     }
-    .main-biblioteca__aside__h4{
+
+    .main-biblioteca__aside__h4 {
         width: 100%;
     }
-    
-    .main-biblioteca__flex{
+
+    .main-biblioteca__flex {
         display: flex;
         flex-wrap: wrap;
 
     }
 }
+
 /*formulario*/
