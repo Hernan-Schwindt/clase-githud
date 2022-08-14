@@ -228,6 +228,10 @@ section .aside .aside__top-10 div b a {
     color: rgb(21, 97, 168);
     text-decoration: none;
 }
+section .aside .aside__top-10 div b a:hover{
+    color: gold;
+    transition: 0.8s;
+}
 
 
 
@@ -277,16 +281,21 @@ main {
     /*nuca mas*/
     padding: 5px;
     /*width: 190px;*/
+    overflow: hidden;
 
 }
 
 /*.manga div div a {
     width: 20%;
 }*/
-
 .manga div div a img {
     width: 100%;
+    transition: 0.5s;
+    object-fit: cover;
 
+}
+.manga div div a img:hover{
+    transform: scale(1.2);
 }
 
 .manga h3 {
