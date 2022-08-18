@@ -4,8 +4,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-body {
+body{
+    background-color: #222;
+    color: rgb(21, 97, 168);
+}
+.body-todos {
     background-color: #222;
     display: grid;
     align-items: start;
@@ -21,7 +24,7 @@ body {
 }
 
 /*header*/
-.header {
+/*.header {
     background-color: #123;
     position: sticky;
     display: flex;
@@ -30,8 +33,14 @@ body {
     top: 0;
     grid-area: header;
     /*grid-column: 1/3;
-    grid-row: 1/2;*/
+    grid-row: 1/2;*//*
     z-index: 10;
+}*/
+a{
+    text-decoration: none;
+}
+h1{
+    font-size: 23px;
 }
 
 .header__home {
@@ -307,7 +316,8 @@ main {
 /*footer*/
 footer {
     background-color: #123;
-    height: 70px;
+    height: 90px;
+    width: 100%;
     grid-area: footer;
     /*grid-column: 1/3;*/
 }
@@ -319,9 +329,9 @@ footer .siguenos {
 }
 
 footer .small {
-    background-color: rgb(0, 71, 143);
+    
     text-align: center;
-    height: 18px;
+    height: 20px;
     /*padding-top: 50px;*/
 
 }
@@ -410,16 +420,6 @@ section .memes div iframe {
 }
 
 /*biblioteca*/
-.biblioteca-body {
-
-    grid-template-areas: "header header"
-        "main main"
-        "footer footer"
-    ;
-
-
-
-}
 
 /*main*/
 .biblioteca-flex {
@@ -588,13 +588,6 @@ main .capitulos-manhua div ul li a {
 
 /*formulario*/
 /*main*/
-.form-grid {
-    display: grid;
-    min-height: 100vh;
-    grid-template-rows: auto 1fr auto;
-
-}
-
 .mein-form {
     display: flex;
     align-items: center;
@@ -671,6 +664,159 @@ main div .formulario fieldset {
 .box-form {
     height: 250px;
 }
+/*usuario-uso*/
+.nav-backgro-uso{
+    background-color: #123;
+}
+.navbar-brand,
+.navbar-nav .nav-link.active{
+    color: rgb(21, 97, 168);
+}
+header div .navbar div .navbar-brand b{
+    margin-left: 12px;
+}
+.navbar-collapse{
+    justify-content: space-between;
+}
+.header-nav-2{
+    margin-right: 10px;
+}
+.header-nav-1{
+    margin-right: 40px ;
+}
+.main-usuario{
+    text-decoration: none;
+}
+.pending-link{
+    padding: 10px 0px 10px 0px ;
+}
+.span-lista{
+    display: block;
+    font-size: 23px;
+}
+.listas-icono{
+    padding-right: 8px;
+}
+.listas-link-a{
+    text-decoration: none;
+}
+
+.X2{
+    
+    font-size: 25px;
+    
+}
+.button-icono-usuario{
+    font-size: 22px;
+    text-align: center;
+}
+.listas-contenedor{
+    background-color: #123;
+    margin-bottom: 20px;
+}
+.usuario-img{
+    width: 260px ;
+    height: 260px ;
+}
+.n-usuario{
+    background-color: #003ec5;
+    font-size: 25px;
+}
+ul{
+    margin-bottom: 0;
+}
+.float-right{
+    float: right;
+}
+.h2-usuario{
+    background-color: rgb(0, 48, 100);
+}
+.top-10-n{
+    background-color: #234;
+}
+.icino-x{
+    font-size: 200px;
+}
+.img-grupos{
+    width: 410px;
+}
+footer div div .siguenos-uso nav ul li{
+    display: inline-block;
+    text-align: center;
+
+}
+.siguenos-uso{
+    text-align: center;
+}
+.header-regis{
+    grid-area: header-regis ;
+}
+.main-regis{
+    grid-area: main-regis ;
+}
+.footer-regis{
+    grid-area: footer-regis ;
+}
+.body-regis{
+    grid-template-areas: "header-regis"
+                         "main-regis"
+                         "footer-regis"
+;
+}
+.header-formu{
+    grid-area: header-formu;
+}
+.main-formu{
+    grid-area: main-formu;
+}
+.footer-formu{
+    grid-area: footer-formu;
+}
+.body-form {
+    grid-template-areas: "header-formu"
+                         "main-formu"
+                         "footer-formu"
+;
+}
+.header-biblioteca{
+    grid-area: header-biblioteca;
+}
+.main-biblioteca{
+    grid-area: main-biblioteca;
+}
+.footer-biblioteca{
+    grid-area: footer-biblioteca;
+}
+.body-biblioteca {
+
+    grid-template-areas: "header-biblioteca header-biblioteca"
+        "main-biblioteca main-biblioteca"
+        "footer-biblioteca footer-biblioteca"
+    ;
+}
+.header-home{
+    grid-area: header-home ;
+}
+.main-home{
+    grid-area: main-home ;
+}
+.aside-home{
+    grid-area: aside-home ;
+}
+.memes-home{
+    grid-area: memes-home ;
+}
+.footer-home{
+    grid-area: footer-home ;
+}
+.home-body{
+    grid-template-areas: "header-home header-home"
+                         "main-home aside-home"
+                         "ultima aside-home"
+                         "memes-home aside-home"
+                         "footer-home footer-home"
+        ;
+}
 
 /*mediaqueri*/
 /*home*/
@@ -679,11 +825,11 @@ main div .formulario fieldset {
 
         background-color: #000;
         grid-template-areas: "header header"
-            "main main"
-            "ultima ultima"
-            "memes memes"
-            "aside aside"
-            "footer footer"
+                             "main main"
+                             "ultima ultima"
+                             "memes memes"
+                             "aside aside"
+                             "footer footer"
         ;
 
     }
@@ -718,7 +864,7 @@ main div .formulario fieldset {
 
 /*biblioteca*/
 @media screen and (max-width:480px) {
-    .biblioteca-body {
+    .body-biblioteca {
         background-color: #ff00ea;
         width: 480px;
 
@@ -756,5 +902,9 @@ main div .formulario fieldset {
 
     }
 }
-
+@media (min-width: 1200px){
+h1{
+    font-size: 23px;
+}
+}
 /*formulario*/
