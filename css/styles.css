@@ -820,16 +820,16 @@ footer div div .siguenos-uso nav ul li{
 
 /*mediaqueri*/
 /*home*/
-@media screen and (max-width:480px) {
+@media screen and (max-width:540px) {
     .home-body {
 
         background-color: #000;
-        grid-template-areas: "header header"
-                             "main main"
+        grid-template-areas: "header-home header-home"
+                             "main-home main-home"
                              "ultima ultima"
-                             "memes memes"
-                             "aside aside"
-                             "footer footer"
+                             "memes-home memes-home"
+                             "aside-home aside-home"
+                             "footer-home footer-home"
         ;
 
     }
@@ -843,9 +843,46 @@ footer div div .siguenos-uso nav ul li{
         padding: 0px;
     }
 
-    .manga {
+    /*.manga {
         height: 1033px;
         overflow: hidden;
+    }*/
+
+    .manga div div div {
+        width: 50%;
+    }
+
+    .aside-height {
+        display: flex;
+        justify-content: center;
+    }
+
+    header nav form {
+        margin-left: 0;
+    }
+}
+/*tablet*/
+@media (max-width:920px) and (min-width:520px) {
+    .home-body {
+
+        background-color: #000;
+        grid-template-areas: "header-home header-home"
+                             "main-home main-home"
+                             "ultima ultima"
+                             "memes-home memes-home"
+                             "aside-home aside-home"
+                             "footer-home footer-home"
+        ;
+
+    }
+
+
+    .header {
+        flex-direction: column;
+    }
+
+    .manga-flex {
+        padding: 0px;
     }
 
     .manga div div div {
@@ -863,7 +900,7 @@ footer div div .siguenos-uso nav ul li{
 }
 
 /*biblioteca*/
-@media screen and (max-width:480px) {
+@media screen and (max-width:540px) {
     .body-biblioteca {
         background-color: #ff00ea;
         width: 480px;
@@ -877,6 +914,51 @@ footer div div .siguenos-uso nav ul li{
         grid-template-areas: "aside-buscador aside-buscador"
 
             "main-biblioteca main-biblioteca"
+
+    }
+
+    .biblioteca-flex {
+        height: 3418px;
+    }
+
+    .manga div div div {
+        width: 50%;
+    }
+
+    .main-biblioteca__aside {
+        text-align: center;
+    }
+
+    .main-biblioteca__aside__h4 {
+        width: 100%;
+    }
+
+    .main-biblioteca__flex {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+}
+@media (min-width: 1200px){
+h1{
+    font-size: 23px;
+}
+}
+/*tablet*/
+@media (max-width:920px) and (min-width:520px) {
+    .body-biblioteca {
+        background-color: #ff00ea;
+        width: 480px;
+
+    }
+
+    .main-biblioteca {
+        display: grid;
+        align-items: start;
+        width: 100%;
+        grid-template-areas: "aside-buscador aside-buscador"
+
+                             "main-biblioteca main-biblioteca"
 
     }
 
