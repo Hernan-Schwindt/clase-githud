@@ -1,0 +1,331 @@
+//variables
+@import "utilities/variables";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+//body home
+body {
+    background-color: $color-fondo;
+    color: $color-letra;
+
+    a {
+        text-decoration: none;
+        color: $color-letra;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+    h1,h2,h3,h4,h5,h6{
+        margin-bottom: 0;
+    }
+    ul{
+        margin-bottom: 0;
+        padding-left: 0;
+    }
+    .header-a,.navbar-nav .nav-link.active{
+        color: $color-letra;
+    }
+    
+
+}
+.body-todos {
+    display: grid;
+    align-items: start;
+    grid-template-areas: "header header"
+        "main aside"
+        "ultima aside"
+        "memes aside"
+        "footer footer"
+    ;
+    .header-home{
+        grid-area: header-home;
+    }
+    header {
+        div {
+            .nav-backgro-uso {
+                background-color: $color-primario;
+                              div {
+                                  div {
+                                      ul {
+                                          form {
+                                              display: inline-block;
+                                              margin-right: 50px;
+                                              padding-bottom: 5px;
+                                          }
+                                      }
+                                  }
+                              }
+            }
+            nav{
+                div{
+                    .navbar-collapse {
+                        justify-content: space-between;
+                        ul{
+                            .header-nav-1 {
+                                margin-right: 40px;
+                            }
+                            .header-nav-2 {
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /*main home*/
+    .main-home{
+        grid-area: main-home;
+    }
+    main{
+        .img-box{
+            margin-top: 57px;
+            .manga{
+                margin-right: 10px;
+                margin-left: 10px;
+                margin-bottom: 25px;
+                background-color: $color-secundario;
+                display: inline-block;
+                h3{
+                    background-color: $color-primario;
+                    text-align: center;
+                }
+                div{
+                    .manga-flex{
+                        display: flex;
+                        flex-wrap: wrap;
+                        div{
+                            width: 20%;
+                            padding: 5px;
+                            overflow: hidden;
+                            a{
+                                img{
+                                    width: 100%;
+                                    transition: 0.5s;
+                                    object-fit: cover;
+                                }
+                                img:hover{
+                                    transform: scale(1.2);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /*todo el aside*/
+    .aside-home{
+        display: flex;
+        justify-content: center;
+        grid-area: aside-home;
+        .aside{
+            width: 350px;
+            height: 100%;
+            margin-top: 57px;
+            .flex-chat{
+                .aside__chat-web{
+                    display: flex;
+                    background-color: $color-secundario ;
+                    height: 400px;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+                    h2{
+                        background-color: $color-primario;
+                        text-align: center;
+                        font-size: 21px;
+                        color: rgb(21, 97, 168);
+                        text-shadow: 1px 1px 4px $color-tercero;
+                        width: 350px;
+                    }
+                    .aside__chat-web__chat{
+                        background-color: $color-cuarto;
+                        width: 330px;
+                        height: 320px;
+                    }
+                    div{
+                        form{
+                            padding: 10px;
+                            .text{
+                                width: 270px;
+                                padding: 5px;
+                            }
+                        }
+                    }
+                }
+                
+            }
+            .aside__discord{
+                background-color: $color-quinto;
+                height: 56px;
+                div{
+                    h3{
+                        text-align: center;
+                        padding-top: 11px;
+                        a{
+                            color: $color-cuarto;
+                            font-size: 32px;
+                        }
+                        span{
+                            color: $color-cuarto;
+                            font-size: 15px;
+                            padding-left: 32px;
+                        }
+                    }
+                }
+            }
+            .aside__top-10{
+                h2{
+                    background-color: $color-primario;
+                    text-align: center;
+                }
+                .top-todo{
+                    background-color: $color-secundario;
+                    div{
+                        .aside__top-10__n{
+                            text-align: center;
+                            background-color: $color-primario;
+                            color: #000;
+                            display: inline-block;
+                            padding-left: 5px;
+                            width: 50px;
+                            font-size: 30px;
+                        }
+                        b{
+                            a{
+                                color: $color-letra;
+                            }
+                            a:hover{
+                                color: gold;
+                                transition: 0.8s;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+    .memes-home{
+        margin-right: 8px;
+        grid-area: memes-home;
+        .memes{
+            background-color: $color-secundario;
+            margin-left: 5px;
+            h4{
+                background-color: $color-primario;
+                text-align: center;
+                font-size: 25px;
+            }
+            .memes-flex{
+                padding: 4px;
+                display: grid;
+                grid-template-areas:
+                        "chaman eva"
+                        "cora video";
+                .chaman{
+                    grid-area: chaman;
+                    img{
+                            width: 100%;
+                        }
+                }
+                .eva{
+                    grid-area: eva;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .cora{
+                    img{
+                        width: 100%;
+                        grid-area: cora;
+                    }
+                }
+                iframe{
+                    height: 315px;
+                    width: 100%;
+                    grid-area: video;
+                }
+            }
+        }
+        .grid-ultimo {
+            grid-area: ultima;
+            margin-top: 25px;
+        }
+        .img-box{
+            .manga{
+                h3{
+                    text-align: center;
+                    background-color: $color-primario;
+                }
+                div{
+                    background-color: $color-secundario;
+                    .manga-flex{
+                        display: flex;
+                        flex-wrap: wrap;
+                        div{
+                            width: 20%;
+                            padding: 5px;
+                            overflow: hidden;
+                            a{
+                                img{
+                                    width: 100%;
+                                    transition: 0.5s;
+                                    object-fit: cover;
+                                }
+                                img:hover{
+                                    transform: scale(1.2);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer-home {
+        grid-area: footer-home;
+    }
+    footer{
+        background-color: $color-primario;
+        height: 90px;
+        width: 100%;
+        div{
+            .siguenos{
+                text-align: center;
+                nav{
+                    ul{
+                        li{
+                            display: inline-block;
+                            height: 30px;
+                            width: 30px;
+                            text-align: center;
+                            a{
+                                color: aqua;
+                            }
+                        }
+                    }
+                }
+            }
+            .small{
+                text-align: center;
+                height: 20px;
+                small{
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+.home-body{
+    grid-template-areas: "header-home header-home"
+                         "main-home aside-home"
+                         "ultima aside-home"
+                         "memes-home aside-home"
+                         "footer-home footer-home"
+        ;
+}
