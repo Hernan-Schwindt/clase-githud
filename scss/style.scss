@@ -10,6 +10,7 @@ body {
     color: $color-letra;
     background:linear-gradient($color-fondo-opacity , $color-fondo-opacity), url(../img/aleatorias/bg-fondo.jpg) no-repeat center center fixed $color-fondo;
     background-size: cover;
+    min-width: 100vh;
 
     a {
         text-decoration: none;
@@ -381,16 +382,16 @@ body {
             .main-biblioteca__aside {
                 background-color: $color-secundario;
                 display: inline-block;
-                width: 100%;
+                width: 150%;
                 margin-top: 0px;
+                margin-left: 5px;
                 margin-right: 5px;
                 grid-area: aside-biblioteca;
                 div{
                     .main-biblioteca__aside__h4 {
                         text-align: center;
                         background-color: $color-primario;
-                        width: 180px;
-                        width: 50vh;
+                        width: 100%;
                     }
                     div{
                         text-align: center;
@@ -401,8 +402,7 @@ body {
                         .main-biblioteca__aside__h4 {
                             text-align: center;
                             background-color: $color-primario;
-                            width: 180px;
-                            width: 50vh;
+                            width: 100%;
                         }
                     }
                 }
@@ -410,8 +410,7 @@ body {
                     .main-biblioteca__aside__h4 {
                         text-align: center;
                         background-color: $color-primario;
-                        width: 180px;
-                        width: 50vh;
+                        width: 100%;
                     }
                 }
             }

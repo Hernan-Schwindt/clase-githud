@@ -6,7 +6,8 @@
 body {
   color: #D9FAFF;
   background: linear-gradient(#22222296, #22222296), url(../img/aleatorias/bg-fondo.jpg) no-repeat center center fixed #222;
-  background-size: cover; }
+  background-size: cover;
+  min-width: 100vh; }
   body a {
     text-decoration: none;
     color: #D9FAFF; }
@@ -240,27 +241,25 @@ body {
       .body-biblioteca .main-biblioteca .main-biblioteca__flex .main-biblioteca__aside {
         background-color: #1F4287;
         display: inline-block;
-        width: 100%;
+        width: 150%;
         margin-top: 0px;
+        margin-left: 5px;
         margin-right: 5px;
         grid-area: aside-biblioteca; }
         .body-biblioteca .main-biblioteca .main-biblioteca__flex .main-biblioteca__aside div .main-biblioteca__aside__h4 {
           text-align: center;
           background-color: #071E3D;
-          width: 180px;
-          width: 50vh; }
+          width: 100%; }
         .body-biblioteca .main-biblioteca .main-biblioteca__flex .main-biblioteca__aside div div {
           text-align: center; }
         .body-biblioteca .main-biblioteca .main-biblioteca__flex .main-biblioteca__aside div div .main-biblioteca__aside__h4 {
           text-align: center;
           background-color: #071E3D;
-          width: 180px;
-          width: 50vh; }
+          width: 100%; }
         .body-biblioteca .main-biblioteca .main-biblioteca__flex .main-biblioteca__aside div .main-biblioteca__aside__h4 {
           text-align: center;
           background-color: #071E3D;
-          width: 180px;
-          width: 50vh; }
+          width: 100%; }
       .body-biblioteca .main-biblioteca .main-biblioteca__flex .biblioteca-box {
         display: inline-block;
         margin-top: 0px; }
