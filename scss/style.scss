@@ -10,7 +10,7 @@ body {
     color: $color-letra;
     background:linear-gradient($color-fondo-opacity , $color-fondo-opacity), url(../img/aleatorias/bg-fondo.jpg) no-repeat center center fixed $color-fondo;
     background-size: cover;
-    min-width: 100vh;
+    max-width: 100%;
 
     a {
         text-decoration: none;
@@ -18,7 +18,7 @@ body {
     }
     main{
         min-height: calc(100vh - 59px - 90px);
-        min-width: 100vh;
+        max-width: 100%;
     }
     footer{
         margin-top: 10px;
