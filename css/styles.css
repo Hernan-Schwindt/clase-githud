@@ -4,11 +4,17 @@
   box-sizing: border-box; }
 
 body {
-  background-color: #222;
-  color: #D9FAFF; }
+  color: #D9FAFF;
+  background: linear-gradient(#22222296, #22222296), url(../img/aleatorias/bg-fondo.jpg) no-repeat center center fixed #222;
+  background-size: cover; }
   body a {
     text-decoration: none;
     color: #D9FAFF; }
+  body main {
+    min-height: calc(100vh - 59px - 90px);
+    min-width: 100vh; }
+  body footer {
+    margin-top: 10px; }
   body h1 {
     font-size: 23px; }
   body h1, body h2, body h3, body h4, body h5, body h6 {
@@ -16,8 +22,12 @@ body {
   body ul {
     margin-bottom: 0;
     padding-left: 0; }
+  body .header-a {
+    margin-right: 25px; }
   body .header-a, body .navbar-nav .nav-link.active {
     color: #D9FAFF; }
+  body select {
+    word-wrap: normal; }
 
 .body-todos {
   display: grid;
@@ -73,48 +83,48 @@ body {
       width: 350px;
       height: 100%;
       margin-top: 57px; }
-      .body-todos .aside-home .aside .flex-chat .aside__chat-web {
+      .body-todos .aside-home .aside__flex-chat__chat-web {
         display: flex;
         background-color: #1F4287;
         height: 400px;
         flex-direction: column;
         align-items: center;
         justify-content: space-between; }
-        .body-todos .aside-home .aside .flex-chat .aside__chat-web h2 {
+        .body-todos .aside-home .aside__flex-chat__chat-web h2 {
           background-color: #071E3D;
           text-align: center;
           font-size: 21px;
           color: #1561a8;
           text-shadow: 1px 1px 4px #278EA5;
           width: 350px; }
-        .body-todos .aside-home .aside .flex-chat .aside__chat-web .aside__chat-web__chat {
+        .body-todos .aside-home .aside__flex-chat__chat-web__chat {
           background-color: #fff;
           width: 330px;
           height: 320px; }
-        .body-todos .aside-home .aside .flex-chat .aside__chat-web div form {
+        .body-todos .aside-home .aside__flex-chat__chat-web div form {
           padding: 10px; }
-          .body-todos .aside-home .aside .flex-chat .aside__chat-web div form .text {
+          .body-todos .aside-home .aside__flex-chat__chat-web div form .text {
             width: 270px;
             padding: 5px; }
-      .body-todos .aside-home .aside .aside__discord {
+      .body-todos .aside-home .aside__discord {
         background-color: #5865f2;
         height: 56px; }
-        .body-todos .aside-home .aside .aside__discord div h3 {
+        .body-todos .aside-home .aside__discord div h3 {
           text-align: center;
           padding-top: 11px; }
-          .body-todos .aside-home .aside .aside__discord div h3 a {
+          .body-todos .aside-home .aside__discord div h3 a {
             color: #fff;
             font-size: 32px; }
-          .body-todos .aside-home .aside .aside__discord div h3 span {
+          .body-todos .aside-home .aside__discord div h3 span {
             color: #fff;
             font-size: 15px;
             padding-left: 32px; }
-      .body-todos .aside-home .aside .aside__top-10 h2 {
+      .body-todos .aside-home .aside__top-10 h2 {
         background-color: #071E3D;
         text-align: center; }
-      .body-todos .aside-home .aside .aside__top-10 .top-todo {
+      .body-todos .aside-home .aside__top-10__top-todo {
         background-color: #1F4287; }
-        .body-todos .aside-home .aside .aside__top-10 .top-todo div .aside__top-10__n {
+        .body-todos .aside-home .aside__top-10__top-todo__div__n {
           text-align: center;
           background-color: #071E3D;
           color: #000;
@@ -122,9 +132,9 @@ body {
           padding-left: 5px;
           width: 50px;
           font-size: 30px; }
-        .body-todos .aside-home .aside .aside__top-10 .top-todo div b a {
+        .body-todos .aside-home .aside__top-10__top-todo__div b a {
           color: #D9FAFF; }
-        .body-todos .aside-home .aside .aside__top-10 .top-todo div b a:hover {
+        .body-todos .aside-home .aside__top-10__top-todo__div b a:hover {
           color: gold;
           transition: 0.8s; }
   .body-todos .memes-home {
@@ -200,3 +210,167 @@ body {
 
 .home-body {
   grid-template-areas: "header-home header-home" "main-home aside-home" "ultima aside-home" "memes-home aside-home" "footer-home footer-home"; }
+
+.body-biblioteca {
+  grid-template-areas: "header-biblioteca header-biblioteca" "main-biblioteca main-biblioteca" "footer-biblioteca footer-biblioteca"; }
+  .body-biblioteca .header-biblioteca {
+    grid-area: header-biblioteca; }
+  .body-biblioteca .main-biblioteca {
+    grid-area: main-biblioteca; }
+    .body-biblioteca .main-biblioteca div {
+      grid-area: aside-buscador aside-buscador; }
+      .body-biblioteca .main-biblioteca div .main-biblioteca__form {
+        background-color: #1F4287;
+        height: 45px;
+        margin-top: 25px;
+        margin-bottom: 20px; }
+        .body-biblioteca .main-biblioteca div .main-biblioteca__form input {
+          margin-top: 5px; }
+        .body-biblioteca .main-biblioteca div .main-biblioteca__form .main-biblioteca__form__buscador {
+          width: 50%;
+          height: 30px;
+          font-size: 18px;
+          margin-left: 10px; }
+        .body-biblioteca .main-biblioteca div .main-biblioteca__form .main-biblioteca__form__enviar {
+          padding: 4px; }
+    .body-biblioteca .main-biblioteca .main-biblioteca__flex {
+      display: flex;
+      flex-wrap: nowrap;
+      grid-area: main-biblioteca; }
+      .body-biblioteca .main-biblioteca .main-biblioteca__flex .main-biblioteca__aside {
+        background-color: #1F4287;
+        display: inline-block;
+        width: 100%;
+        margin-top: 0px;
+        margin-right: 5px;
+        grid-area: aside-biblioteca; }
+        .body-biblioteca .main-biblioteca .main-biblioteca__flex .main-biblioteca__aside div .main-biblioteca__aside__h4 {
+          text-align: center;
+          background-color: #071E3D;
+          width: 180px;
+          width: 50vh; }
+        .body-biblioteca .main-biblioteca .main-biblioteca__flex .main-biblioteca__aside div div {
+          text-align: center; }
+        .body-biblioteca .main-biblioteca .main-biblioteca__flex .main-biblioteca__aside div div .main-biblioteca__aside__h4 {
+          text-align: center;
+          background-color: #071E3D;
+          width: 180px;
+          width: 50vh; }
+        .body-biblioteca .main-biblioteca .main-biblioteca__flex .main-biblioteca__aside div .main-biblioteca__aside__h4 {
+          text-align: center;
+          background-color: #071E3D;
+          width: 180px;
+          width: 50vh; }
+      .body-biblioteca .main-biblioteca .main-biblioteca__flex .biblioteca-box {
+        display: inline-block;
+        margin-top: 0px; }
+        .body-biblioteca .main-biblioteca .main-biblioteca__flex .biblioteca-box div {
+          width: 100%; }
+          .body-biblioteca .main-biblioteca .main-biblioteca__flex .biblioteca-box div .biblioteca-flex {
+            width: 100%;
+            margin-bottom: 25px;
+            background-color: #1F4287;
+            display: inline-block; }
+            .body-biblioteca .main-biblioteca .main-biblioteca__flex .biblioteca-box div .biblioteca-flex h3 {
+              text-align: center;
+              background-color: #071E3D; }
+            .body-biblioteca .main-biblioteca .main-biblioteca__flex .biblioteca-box div .biblioteca-flex div .manga-flex {
+              padding: 5px;
+              display: flex;
+              flex-wrap: wrap; }
+              .body-biblioteca .main-biblioteca .main-biblioteca__flex .biblioteca-box div .biblioteca-flex div .manga-flex div {
+                width: 20%;
+                padding: 5px;
+                overflow: hidden; }
+                .body-biblioteca .main-biblioteca .main-biblioteca__flex .biblioteca-box div .biblioteca-flex div .manga-flex div a img {
+                  width: 100%;
+                  transition: 0.5s;
+                  object-fit: cover; }
+            .body-biblioteca .main-biblioteca .main-biblioteca__flex .biblioteca-box div .biblioteca-flex .botones-de-cambio {
+              display: flex;
+              justify-content: space-between; }
+  .body-biblioteca .footer-biblioteca {
+    grid-area: footer-biblioteca; }
+
+.body-form {
+  grid-template-areas: "header-formu" "main-formu" "footer-formu"; }
+  .body-form .main-formu {
+    grid-area: main-formu;
+    margin-top: 10px; }
+    .body-form .main-formu .mein-form {
+      display: flex;
+      align-items: center;
+      width: 100%; }
+      .body-form .main-formu .mein-form .main-form__flex {
+        margin: 0 auto; }
+        .body-form .main-formu .mein-form .main-form__flex div .formulario fieldset {
+          text-align: center;
+          background-color: #0e2e74a1;
+          width: 470px; }
+          .body-form .main-formu .mein-form .main-form__flex div .formulario fieldset h2 {
+            text-align: center;
+            margin-top: 25px;
+            margin-bottom: 10px; }
+          .body-form .main-formu .mein-form .main-form__flex div .formulario fieldset .apellido-nombre {
+            margin-bottom: 5px; }
+            .body-form .main-formu .mein-form .main-form__flex div .formulario fieldset .apellido-nombre input {
+              background: #0e2e74a1;
+              font-size: #D9FAFF; }
+          .body-form .main-formu .mein-form .main-form__flex div .formulario fieldset .genero {
+            margin-left: -200px; }
+          .body-form .main-formu .mein-form .main-form__flex div .formulario fieldset .mail input {
+            margin-left: -90px; }
+          .body-form .main-formu .mein-form .main-form__flex div .formulario fieldset .mail .text-asunto {
+            margin-left: -10px;
+            margin-top: 5px;
+            margin-bottom: 5px; }
+            .body-form .main-formu .mein-form .main-form__flex div .formulario fieldset .mail .text-asunto textarea {
+              width: 350px; }
+          .body-form .main-formu .mein-form .main-form__flex div .formulario fieldset .form-enviar {
+            margin-left: 300px;
+            margin-bottom: 20px; }
+
+/*mesiaqueris*/
+@media screen and (max-width: 540px) {
+  .home-body {
+    background-color: #000;
+    grid-template-areas: "header-home header-home" "main-home main-home" "ultima ultima" "memes-home memes-home" "aside-home aside-home" "footer-home footer-home"; }
+  .body-todos .memes-home .img-box .manga div .manga-flex div,
+  .body-biblioteca .main-biblioteca .main-biblioteca__flex .biblioteca-box div .biblioteca-flex div .manga-flex div {
+    width: 50%; }
+  .aside-height {
+    display: flex;
+    justify-content: center; }
+  .body-todos main .img-box .manga div .manga-flex div {
+    width: 50%; }
+  .body-biblioteca .main-biblioteca .main-biblioteca__flex {
+    display: flex;
+    flex-wrap: wrap; }
+  .body-biblioteca .main-biblioteca .main-biblioteca__flex .main-biblioteca__aside {
+    text-align: center; }
+  .body-biblioteca .main-biblioteca .main-biblioteca__flex .main-biblioteca__aside div .main-biblioteca__aside__h4,
+  .body-biblioteca .main-biblioteca .main-biblioteca__flex .main-biblioteca__aside div div .main-biblioteca__aside__h4,
+  .body-biblioteca .main-biblioteca div .main-biblioteca__form {
+    width: 100%; }
+  .body-biblioteca .main-biblioteca div .main-biblioteca__form .main-biblioteca__form__buscador {
+    width: 70%; } }
+
+@media (max-width: 920px) and (min-width: 520px) {
+  .home-body {
+    background-color: #000;
+    grid-template-areas: "header-home header-home" "main-home main-home" "ultima ultima" "memes-home memes-home" "aside-home aside-home" "footer-home footer-home"; }
+  .body-todos .memes-home .img-box .manga div .manga-flex div,
+  .body-biblioteca .main-biblioteca .main-biblioteca__flex .biblioteca-box div .biblioteca-flex div .manga-flex div,
+  .body-todos main .img-box .manga div .manga-flex div {
+    width: 33.33%; }
+  .body-biblioteca .main-biblioteca .main-biblioteca__flex {
+    display: flex;
+    flex-wrap: wrap; }
+  .body-biblioteca .main-biblioteca .main-biblioteca__flex .main-biblioteca__aside {
+    text-align: center; }
+  .body-biblioteca .main-biblioteca .main-biblioteca__flex .main-biblioteca__aside div .main-biblioteca__aside__h4,
+  .body-biblioteca .main-biblioteca .main-biblioteca__flex .main-biblioteca__aside div div .main-biblioteca__aside__h4,
+  .body-biblioteca .main-biblioteca div .main-biblioteca__form {
+    width: 100%; }
+  .body-biblioteca .main-biblioteca div .main-biblioteca__form .main-biblioteca__form__buscador {
+    width: 60%; } }

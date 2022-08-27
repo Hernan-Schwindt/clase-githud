@@ -1,0 +1,86 @@
+@media screen and (max-width:540px) {
+    .home-body {
+
+        background-color: #000;
+        grid-template-areas: "header-home header-home"
+                             "main-home main-home"
+                             "ultima ultima"
+                             "memes-home memes-home"
+                             "aside-home aside-home"
+                             "footer-home footer-home"
+        ;
+    }
+        .body-todos .memes-home .img-box .manga div .manga-flex div,
+        .body-biblioteca .main-biblioteca .main-biblioteca__flex .biblioteca-box div .biblioteca-flex div .manga-flex div
+         {
+            width: 50%;
+        }
+        .aside-height {
+            display: flex;
+            justify-content: center;
+        }
+    .body-todos {
+        main {
+            .img-box {
+                .manga {
+                    div {
+                        .manga-flex {
+                            div {
+                                width: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .body-biblioteca .main-biblioteca .main-biblioteca__flex{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .body-biblioteca .main-biblioteca .main-biblioteca__flex .main-biblioteca__aside {
+        text-align: center;
+    }
+    .body-biblioteca .main-biblioteca .main-biblioteca__flex .main-biblioteca__aside div .main-biblioteca__aside__h4,
+    .body-biblioteca .main-biblioteca .main-biblioteca__flex .main-biblioteca__aside div div .main-biblioteca__aside__h4, 
+    .body-biblioteca .main-biblioteca div .main-biblioteca__form{
+        width: 100%;
+    }
+    .body-biblioteca .main-biblioteca div .main-biblioteca__form .main-biblioteca__form__buscador{
+        width: 70%;
+    }
+}
+@media (max-width:920px) and (min-width:520px) {
+    .home-body {
+
+        background-color: #000;
+        grid-template-areas: "header-home header-home"
+                             "main-home main-home"
+                             "ultima ultima"
+                             "memes-home memes-home"
+                             "aside-home aside-home"
+                             "footer-home footer-home"
+        ;
+
+    }
+    .body-todos .memes-home .img-box .manga div .manga-flex div,
+    .body-biblioteca .main-biblioteca .main-biblioteca__flex .biblioteca-box div .biblioteca-flex div .manga-flex div,
+    .body-todos main .img-box .manga  div .manga-flex div{
+        width: 33.33%;
+    }
+    .body-biblioteca .main-biblioteca .main-biblioteca__flex{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .body-biblioteca .main-biblioteca .main-biblioteca__flex .main-biblioteca__aside {
+        text-align: center;
+    }
+    .body-biblioteca .main-biblioteca .main-biblioteca__flex .main-biblioteca__aside div .main-biblioteca__aside__h4,
+    .body-biblioteca .main-biblioteca .main-biblioteca__flex .main-biblioteca__aside div div .main-biblioteca__aside__h4, 
+    .body-biblioteca .main-biblioteca div .main-biblioteca__form{
+        width: 100%;
+    }
+    .body-biblioteca .main-biblioteca div .main-biblioteca__form .main-biblioteca__form__buscador{
+        width: 60%;
+    }
+}

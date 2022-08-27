@@ -7,12 +7,20 @@
 }
 //body home
 body {
-    background-color: $color-fondo;
     color: $color-letra;
+    background:linear-gradient($color-fondo-opacity , $color-fondo-opacity), url(../img/aleatorias/bg-fondo.jpg) no-repeat center center fixed $color-fondo;
+    background-size: cover;
 
     a {
         text-decoration: none;
         color: $color-letra;
+    }
+    main{
+        min-height: calc(100vh - 59px - 90px);
+        min-width: 100vh;
+    }
+    footer{
+        margin-top: 10px;
     }
 
     h1 {
@@ -25,8 +33,14 @@ body {
         margin-bottom: 0;
         padding-left: 0;
     }
+    .header-a{
+        margin-right: 25px;
+    }
     .header-a,.navbar-nav .nav-link.active{
         color: $color-letra;
+    }
+    select {
+        word-wrap: normal;
     }
     
 
@@ -126,8 +140,8 @@ body {
             width: 350px;
             height: 100%;
             margin-top: 57px;
-            .flex-chat{
-                .aside__chat-web{
+            &__flex-chat{
+                &__chat-web{
                     display: flex;
                     background-color: $color-secundario ;
                     height: 400px;
@@ -142,7 +156,7 @@ body {
                         text-shadow: 1px 1px 4px $color-tercero;
                         width: 350px;
                     }
-                    .aside__chat-web__chat{
+                    &__chat{
                         background-color: $color-cuarto;
                         width: 330px;
                         height: 320px;
@@ -159,7 +173,7 @@ body {
                 }
                 
             }
-            .aside__discord{
+            &__discord{
                 background-color: $color-quinto;
                 height: 56px;
                 div{
@@ -178,15 +192,15 @@ body {
                     }
                 }
             }
-            .aside__top-10{
+            &__top-10{
                 h2{
                     background-color: $color-primario;
                     text-align: center;
                 }
-                .top-todo{
+                &__top-todo{
                     background-color: $color-secundario;
-                    div{
-                        .aside__top-10__n{
+                    &__div{
+                        &__n{
                             text-align: center;
                             background-color: $color-primario;
                             color: #000;
@@ -329,3 +343,182 @@ body {
                          "footer-home footer-home"
         ;
 }
+.body-biblioteca{
+    grid-template-areas:
+    "header-biblioteca header-biblioteca"
+    "main-biblioteca main-biblioteca"
+    "footer-biblioteca footer-biblioteca";
+    .header-biblioteca {
+        grid-area: header-biblioteca;
+    }
+    .main-biblioteca{
+        grid-area: main-biblioteca;
+        div{
+            grid-area: aside-buscador aside-buscador;
+            .main-biblioteca__form{
+                background-color: $color-secundario;
+                height: 45px;
+                margin-top: 25px;
+                margin-bottom: 20px;
+                input{
+                    margin-top: 5px;
+                }
+                .main-biblioteca__form__buscador{
+                    width: 50%;
+                    height: 30px;
+                    font-size: 18px;
+                    margin-left: 10px;
+                }
+                .main-biblioteca__form__enviar{
+                    padding: 4px;
+                }
+            }
+        }
+        .main-biblioteca__flex{
+            display: flex;
+            flex-wrap: nowrap;
+            grid-area: main-biblioteca;
+            .main-biblioteca__aside {
+                background-color: $color-secundario;
+                display: inline-block;
+                width: 100%;
+                margin-top: 0px;
+                margin-right: 5px;
+                grid-area: aside-biblioteca;
+                div{
+                    .main-biblioteca__aside__h4 {
+                        text-align: center;
+                        background-color: $color-primario;
+                        width: 180px;
+                        width: 50vh;
+                    }
+                    div{
+                        text-align: center;
+                    }
+                }
+                div{
+                    div{
+                        .main-biblioteca__aside__h4 {
+                            text-align: center;
+                            background-color: $color-primario;
+                            width: 180px;
+                            width: 50vh;
+                        }
+                    }
+                }
+                div{
+                    .main-biblioteca__aside__h4 {
+                        text-align: center;
+                        background-color: $color-primario;
+                        width: 180px;
+                        width: 50vh;
+                    }
+                }
+            }
+            .biblioteca-box{
+                display: inline-block;
+                margin-top: 0px;
+                div{
+                    width: 100%;
+                    .biblioteca-flex{
+                        width: 100%;
+                        margin-bottom: 25px;
+                        background-color: $color-secundario;
+                        display: inline-block;
+                        h3 {
+                            text-align: center;
+                            background-color: $color-primario;
+                        }
+                        div{
+                            .manga-flex {
+                                padding: 5px;
+                                display: flex;
+                                flex-wrap: wrap;
+                                div {
+                                    width: 20%;
+                                    padding: 5px;
+                                    overflow: hidden;
+                                    a{
+                                        img{
+                                            width: 100%;
+                                            transition: 0.5s;
+                                            object-fit: cover;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .botones-de-cambio{
+                            display: flex;
+                            justify-content: space-between;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer-biblioteca {
+        grid-area: footer-biblioteca;
+    }
+}
+.body-form{
+    grid-template-areas:
+        "header-formu"
+        "main-formu"
+        "footer-formu";
+    .main-formu{
+        grid-area: main-formu;
+        margin-top: 10px;
+        .mein-form{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            .main-form__flex{
+                margin: 0 auto;
+                div{
+                    .formulario{
+                        fieldset{
+                            text-align: center;
+                            background-color: $color-sexto-opacity;
+                            width: 470px;
+                            h2{
+                                text-align: center;
+                                margin-top: 25px;
+                                margin-bottom: 10px;
+                            }
+                            .apellido-nombre {
+                                margin-bottom: 5px;
+                                input{
+                                    background: $color-sexto-opacity;
+                                    font-size: $color-letra;
+                                }
+                            }
+                            .genero {
+                                margin-left: -200px;
+                            }
+                            .mail{
+                                input {
+                                    margin-left: -90px;
+                                }
+                                .text-asunto {
+                                    margin-left: -10px;
+                                    margin-top: 5px;
+                                    margin-bottom: 5px;
+                                    textarea {
+                                        width: 350px;
+                                    }
+                                }
+                            }
+                            .form-enviar {
+                                margin-left: 300px;
+                                margin-bottom: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*mesiaqueris*/
+@import "utilities/mediaqueris";
