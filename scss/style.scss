@@ -1,15 +1,20 @@
 //variables
 @import "utilities/variables";
-* {
+@import "utilities/maps";
+@import "utilities/mixin";
+@import "utilities/extend";
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 //body home
 body {
     color: $color-letra;
     background:linear-gradient($color-fondo-opacity , $color-fondo-opacity), url(../img/aleatorias/bg-fondo.jpg) no-repeat center center fixed $color-fondo;
     background-size: cover;
+    min-height: 100vh;
     max-width: 100%;
 
     a {
@@ -110,20 +115,15 @@ body {
                 }
                 div{
                     .manga-flex{
-                        display: flex;
-                        flex-wrap: wrap;
+                        @extend %manga-flex;
                         div{
-                            width: 20%;
-                            padding: 5px;
-                            overflow: hidden;
+                            @extend %manga-box;
                             a{
                                 img{
-                                    width: 100%;
-                                    transition: 0.5s;
-                                    object-fit: cover;
+                                    @extend %manga-img;
                                 }
                                 img:hover{
-                                    transform: scale(1.2);
+                                    @extend %manga-img-hover;
                                 }
                             }
                         }
@@ -166,8 +166,7 @@ body {
                         form{
                             padding: 10px;
                             .text{
-                                width: 270px;
-                                padding: 5px;
+                                @include medidas(270px,5px);
                             }
                         }
                     }
@@ -280,20 +279,15 @@ body {
                 div{
                     background-color: $color-secundario;
                     .manga-flex{
-                        display: flex;
-                        flex-wrap: wrap;
+                        @extend %manga-flex;
                         div{
-                            width: 20%;
-                            padding: 5px;
-                            overflow: hidden;
+                            @extend %manga-box;
                             a{
                                 img{
-                                    width: 100%;
-                                    transition: 0.5s;
-                                    object-fit: cover;
+                                    @extend %manga-img;
                                 }
                                 img:hover{
-                                    transform: scale(1.2);
+                                    @extend %manga-img-hover;
                                 }
                             }
                         }
@@ -381,11 +375,11 @@ body {
             grid-area: main-biblioteca;
             .main-biblioteca__aside {
                 background-color: $color-secundario;
-                display: inline-block;
-                width: 150%;
-                margin-top: 0px;
-                margin-left: 5px;
-                margin-right: 5px;
+                display: map-get($map: $biblioteca__aside, $key: biblioteca-display);
+                width: map-get($map: $biblioteca__aside , $key: biblioteca-width );
+                margin-top: map-get($map: $biblioteca__aside , $key: biblioteca-margin-top );
+                margin-left: map-get($map: $biblioteca__aside , $key: biblioteca-margin-left );
+                margin-right: map-get($map: $biblioteca__aside , $key: biblioteca-margin-right );
                 grid-area: aside-biblioteca;
                 div{
                     .main-biblioteca__aside__h4 {
@@ -431,17 +425,15 @@ body {
                         div{
                             .manga-flex {
                                 padding: 5px;
-                                display: flex;
-                                flex-wrap: wrap;
+                                @extend %manga-flex;
                                 div {
-                                    width: 20%;
-                                    padding: 5px;
-                                    overflow: hidden;
+                                    @extend %manga-box;
                                     a{
                                         img{
-                                            width: 100%;
-                                            transition: 0.5s;
-                                            object-fit: cover;
+                                            @extend %manga-img;
+                                        }
+                                        img:hover{
+                                            @extend %manga-img-hover;
                                         }
                                     }
                                 }
@@ -518,6 +510,104 @@ body {
             }
         }
     }
+}
+.cap-img-body{
+    display: inline-block;
+    main{
+        .cap-t{
+            text-align: center;
+            background-color: $color-quinto;
+            h2{
+                color: $color-negro;
+            }
+            h3{
+                @extend %manga-flex;
+                justify-content: center;
+                span{
+                    color: $color-azul ;
+                }
+            }
+        }
+        .cap-img{
+            img{
+                width: 100%;
+            }
+        }
+        .siguiente-cap{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px ;
+            background-color: $color-sexto;
+        }
+    }
+    .footer-cap{
+        margin-top: 0;
+    }
+}
+.body-regis {
+    grid-template-areas:
+        "header-regis"
+        "main-regis"
+        "footer-regis";
+        align-items: center;
+        .header-regis {
+            grid-area: header-regis;
+        }
+        .main-form {
+            grid-area: main-regis;
+                display: flex;
+                align-items: center;
+                width: 100%;
+                &__flex {
+                    display: flex;
+                    justify-content: center;
+                    margin: 0 auto;
+                    .box-form {
+                        height: 250px;
+                        .formulario{
+                            fieldset {
+                                text-align: center;
+                                background-color: #1745aa;
+                                width: 470px;
+                                h2 {
+                                    text-align: center;
+                                    margin-top: 25px;
+                                    margin-bottom: 10px;
+                                }
+                                .apellido-nombre {
+                                    margin-bottom: 5px;
+                                }
+                                .genero {
+                                    margin-left: -200px;
+                                }
+                                .mail{
+                                    input {
+                                        margin-left: -90px;
+                                    }
+                                    .password {
+                                        margin-top: 5px;
+                                        margin-bottom: 5px;
+                                        margin-left: 95px;
+                                        input {
+                                            margin-left: -90px;
+                                        }
+                                        .repetir-password {
+                                            margin-left: 5px;
+                                        }
+                                    }
+                                }
+                                .form-enviar {
+                                    margin-left: 300px;
+                                    margin-bottom: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+        }
+        .footer-regis {
+            grid-area: footer-regis;
+        }
 }
 /*mesiaqueris*/
 @import "utilities/mediaqueris";

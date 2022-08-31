@@ -1,0 +1,22 @@
+%manga-box{
+    width: 20%;
+    padding: 5px;
+    overflow: hidden;
+}
+%manga-img{
+    width: 100%;
+    transition: 0.5s;
+    object-fit: cover;
+}
+%manga-img-hover{
+    transform: scale(1.2);
+}
+%manga-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+%forms-flex{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}

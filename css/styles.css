@@ -1,12 +1,32 @@
+@charset "UTF-8";
+.body-todos main .img-box .manga div .manga-flex div, .body-todos .memes-home .img-box .manga div .manga-flex div, .body-biblioteca .main-biblioteca .main-biblioteca__flex .biblioteca-box div .biblioteca-flex div .manga-flex div {
+  width: 20%;
+  padding: 5px;
+  overflow: hidden; }
+
+.body-todos main .img-box .manga div .manga-flex div a img, .body-todos .memes-home .img-box .manga div .manga-flex div a img, .body-biblioteca .main-biblioteca .main-biblioteca__flex .biblioteca-box div .biblioteca-flex div .manga-flex div a img {
+  width: 100%;
+  transition: 0.5s;
+  object-fit: cover; }
+
+.body-todos main .img-box .manga div .manga-flex div a img:hover, .body-todos .memes-home .img-box .manga div .manga-flex div a img:hover, .body-biblioteca .main-biblioteca .main-biblioteca__flex .biblioteca-box div .biblioteca-flex div .manga-flex div a img:hover {
+  transform: scale(1.2); }
+
+.body-todos main .img-box .manga div .manga-flex, .body-todos .memes-home .img-box .manga div .manga-flex, .body-biblioteca .main-biblioteca .main-biblioteca__flex .biblioteca-box div .biblioteca-flex div .manga-flex, .cap-img-body main .cap-t h3 {
+  display: flex;
+  flex-wrap: wrap; }
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: 'Roboto Condensed', sans-serif; }
 
 body {
   color: #D9FAFF;
   background: linear-gradient(#22222296, #22222296), url(../img/aleatorias/bg-fondo.jpg) no-repeat center center fixed #222;
   background-size: cover;
+  min-height: 100vh;
   max-width: 100%; }
   body a {
     text-decoration: none;
@@ -63,19 +83,6 @@ body {
       .body-todos main .img-box .manga h3 {
         background-color: #071E3D;
         text-align: center; }
-      .body-todos main .img-box .manga div .manga-flex {
-        display: flex;
-        flex-wrap: wrap; }
-        .body-todos main .img-box .manga div .manga-flex div {
-          width: 20%;
-          padding: 5px;
-          overflow: hidden; }
-          .body-todos main .img-box .manga div .manga-flex div a img {
-            width: 100%;
-            transition: 0.5s;
-            object-fit: cover; }
-          .body-todos main .img-box .manga div .manga-flex div a img:hover {
-            transform: scale(1.2); }
   .body-todos .aside-home {
     display: flex;
     justify-content: center;
@@ -175,19 +182,6 @@ body {
       background-color: #071E3D; }
     .body-todos .memes-home .img-box .manga div {
       background-color: #1F4287; }
-      .body-todos .memes-home .img-box .manga div .manga-flex {
-        display: flex;
-        flex-wrap: wrap; }
-        .body-todos .memes-home .img-box .manga div .manga-flex div {
-          width: 20%;
-          padding: 5px;
-          overflow: hidden; }
-          .body-todos .memes-home .img-box .manga div .manga-flex div a img {
-            width: 100%;
-            transition: 0.5s;
-            object-fit: cover; }
-          .body-todos .memes-home .img-box .manga div .manga-flex div a img:hover {
-            transform: scale(1.2); }
   .body-todos .footer-home {
     grid-area: footer-home; }
   .body-todos footer {
@@ -274,17 +268,7 @@ body {
               text-align: center;
               background-color: #071E3D; }
             .body-biblioteca .main-biblioteca .main-biblioteca__flex .biblioteca-box div .biblioteca-flex div .manga-flex {
-              padding: 5px;
-              display: flex;
-              flex-wrap: wrap; }
-              .body-biblioteca .main-biblioteca .main-biblioteca__flex .biblioteca-box div .biblioteca-flex div .manga-flex div {
-                width: 20%;
-                padding: 5px;
-                overflow: hidden; }
-                .body-biblioteca .main-biblioteca .main-biblioteca__flex .biblioteca-box div .biblioteca-flex div .manga-flex div a img {
-                  width: 100%;
-                  transition: 0.5s;
-                  object-fit: cover; }
+              padding: 5px; }
             .body-biblioteca .main-biblioteca .main-biblioteca__flex .biblioteca-box div .biblioteca-flex .botones-de-cambio {
               display: flex;
               justify-content: space-between; }
@@ -329,6 +313,71 @@ body {
             margin-left: 300px;
             margin-bottom: 20px; }
 
+.cap-img-body {
+  display: inline-block; }
+  .cap-img-body main .cap-t {
+    text-align: center;
+    background-color: #5865f2; }
+    .cap-img-body main .cap-t h2 {
+      color: #000000; }
+    .cap-img-body main .cap-t h3 {
+      justify-content: center; }
+      .cap-img-body main .cap-t h3 span {
+        color: #0644ff; }
+  .cap-img-body main .cap-img img {
+    width: 100%; }
+  .cap-img-body main .siguiente-cap {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #1745aa; }
+  .cap-img-body .footer-cap {
+    margin-top: 0; }
+
+.body-regis {
+  grid-template-areas: "header-regis" "main-regis" "footer-regis";
+  align-items: center; }
+  .body-regis .header-regis {
+    grid-area: header-regis; }
+  .body-regis .main-form {
+    grid-area: main-regis;
+    display: flex;
+    align-items: center;
+    width: 100%; }
+    .body-regis .main-form__flex {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto; }
+      .body-regis .main-form__flex .box-form {
+        height: 250px; }
+        .body-regis .main-form__flex .box-form .formulario fieldset {
+          text-align: center;
+          background-color: #1745aa;
+          width: 470px; }
+          .body-regis .main-form__flex .box-form .formulario fieldset h2 {
+            text-align: center;
+            margin-top: 25px;
+            margin-bottom: 10px; }
+          .body-regis .main-form__flex .box-form .formulario fieldset .apellido-nombre {
+            margin-bottom: 5px; }
+          .body-regis .main-form__flex .box-form .formulario fieldset .genero {
+            margin-left: -200px; }
+          .body-regis .main-form__flex .box-form .formulario fieldset .mail input {
+            margin-left: -90px; }
+          .body-regis .main-form__flex .box-form .formulario fieldset .mail .password {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            margin-left: 95px; }
+            .body-regis .main-form__flex .box-form .formulario fieldset .mail .password input {
+              margin-left: -90px; }
+            .body-regis .main-form__flex .box-form .formulario fieldset .mail .password .repetir-password {
+              margin-left: 5px; }
+          .body-regis .main-form__flex .box-form .formulario fieldset .form-enviar {
+            margin-left: 300px;
+            margin-bottom: 20px; }
+  .body-regis .footer-regis {
+    grid-area: footer-regis; }
+
 /*mesiaqueris*/
 @media screen and (max-width: 540px) {
   .home-body {
@@ -362,7 +411,7 @@ body {
   .body-biblioteca .main-biblioteca .main-biblioteca__flex .biblioteca-box div .biblioteca-flex div .manga-flex div,
   .body-todos main .img-box .manga div .manga-flex div {
     width: 33.33%; }
-  .body-biblioteca .main-biblioteca .main-biblioteca__flex {
+  º .body-biblioteca .main-biblioteca .main-biblioteca__flex {
     display: flex;
     flex-wrap: wrap; }
   .body-biblioteca .main-biblioteca .main-biblioteca__flex .main-biblioteca__aside {
