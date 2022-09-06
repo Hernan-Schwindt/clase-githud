@@ -1,4 +1,7 @@
 @media screen and (max-width:540px) {
+    body{
+        max-width: 100%;
+    }
     .home-body {
 
         background-color: #000;
@@ -9,6 +12,26 @@
                              "aside-home aside-home"
                              "footer-home footer-home"
         ;
+    }
+    .manga-descripcion main .div-descripcion .historia-titulo{
+        margin-right: 0;
+    }
+    .manga-descripcion main .div-descripcion .img{
+        margin-left: 0;
+    }
+    .manga-descripcion main .capitulos{
+        margin: 10px;
+    }
+    .manga-descripcion main{
+        grid-template-areas:"div-descripsion " 
+                            "capitulo"
+                            "memes"
+                            "aside"
+        ;
+    }
+    .manga-descripcion main .div-descripcion{
+        flex-wrap:wrap;
+        justify-content: center;
     }
         .body-todos .memes-home .img-box .manga div .manga-flex div,
         .body-biblioteca .main-biblioteca .main-biblioteca__flex .biblioteca-box div .biblioteca-flex div .manga-flex div
@@ -51,6 +74,15 @@
     }
 }
 @media (max-width:920px) and (min-width:520px) {
+    body{
+        max-width: 100%;
+    }
+    .manga-descripcion main .div-descripcion .historia-titulo{
+        margin-right: 0;
+    }
+    .manga-descripcion main .div-descripcion .img{
+        margin-left: 0;
+    }
     .home-body {
 
         background-color: #000;
@@ -62,6 +94,17 @@
                              "footer-home footer-home"
         ;
 
+    }
+    .manga-descripcion main .div-descripcion{
+        flex-wrap:wrap;
+        justify-content: center;
+    }
+    .manga-descripcion main{
+        grid-template-areas:"div-descripsion div-descripsion" 
+                            "capitulo capitulo"
+                            "memes memes"
+                            "aside aside"
+        ;
     }
     .body-todos .memes-home .img-box .manga div .manga-flex div,
     .body-biblioteca .main-biblioteca .main-biblioteca__flex .biblioteca-box div .biblioteca-flex div .manga-flex div,

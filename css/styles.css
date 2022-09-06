@@ -31,21 +31,31 @@ body {
   body a {
     text-decoration: none;
     color: #D9FAFF; }
+  body header {
+    max-width: 100%; }
   body main {
     min-height: calc(100vh - 59px - 90px);
-    max-width: 100%; }
+    max-width: 100%;
+    min-width: 100%; }
   body footer {
-    margin-top: 10px; }
+    margin-top: 10px;
+    max-width: 100%; }
   body h1 {
     font-size: 23px; }
-  body h1, body h2, body h3, body h4, body h5, body h6 {
+  body h1,
+  body h2,
+  body h3,
+  body h4,
+  body h5,
+  body h6 {
     margin-bottom: 0; }
   body ul {
     margin-bottom: 0;
     padding-left: 0; }
   body .header-a {
     margin-right: 25px; }
-  body .header-a, body .navbar-nav .nav-link.active {
+  body .header-a,
+  body .navbar-nav .nav-link.active {
     color: #D9FAFF; }
   body select {
     word-wrap: normal; }
@@ -58,9 +68,9 @@ body {
   /*todo el aside*/ }
   .body-todos .header-home {
     grid-area: header-home; }
-  .body-todos header div .nav-backgro-uso {
+  .body-todos header div nav {
     background-color: #071E3D; }
-    .body-todos header div .nav-backgro-uso div div ul form {
+    .body-todos header div nav div div ul form {
       display: inline-block;
       margin-right: 50px;
       padding-bottom: 5px; }
@@ -78,7 +88,7 @@ body {
       margin-right: 10px;
       margin-left: 10px;
       margin-bottom: 25px;
-      background-color: #1F4287;
+      background-color: #1f428798;
       display: inline-block; }
       .body-todos main .img-box .manga h3 {
         background-color: #071E3D;
@@ -128,13 +138,13 @@ body {
             font-size: 15px;
             padding-left: 32px; }
       .body-todos .aside-home .aside__top-10 h2 {
-        background-color: #071E3D;
+        background-color: #071e3db4;
         text-align: center; }
       .body-todos .aside-home .aside__top-10__top-todo {
-        background-color: #1F4287; }
+        background-color: #1f428798; }
         .body-todos .aside-home .aside__top-10__top-todo__div__n {
           text-align: center;
-          background-color: #071E3D;
+          background-color: #071e3db4;
           color: #000;
           display: inline-block;
           padding-left: 5px;
@@ -149,7 +159,7 @@ body {
     margin-right: 8px;
     grid-area: memes-home; }
     .body-todos .memes-home .memes {
-      background-color: #1F4287;
+      background-color: #0e2e74a1;
       margin-left: 5px; }
       .body-todos .memes-home .memes h4 {
         background-color: #071E3D;
@@ -177,11 +187,13 @@ body {
     .body-todos .memes-home .grid-ultimo {
       grid-area: ultima;
       margin-top: 25px; }
-    .body-todos .memes-home .img-box .manga h3 {
-      text-align: center;
-      background-color: #071E3D; }
-    .body-todos .memes-home .img-box .manga div {
-      background-color: #1F4287; }
+    .body-todos .memes-home .img-box {
+      margin-left: 10px; }
+      .body-todos .memes-home .img-box .manga h3 {
+        text-align: center;
+        background-color: #071E3D; }
+      .body-todos .memes-home .img-box .manga div .manga-flex {
+        background-color: #1f428798; }
   .body-todos .footer-home {
     grid-area: footer-home; }
   .body-todos footer {
@@ -233,7 +245,7 @@ body {
       flex-wrap: nowrap;
       grid-area: main-biblioteca; }
       .body-biblioteca .main-biblioteca .main-biblioteca__flex .main-biblioteca__aside {
-        background-color: #1F4287;
+        background-color: #1f428798;
         display: inline-block;
         width: 150%;
         margin-top: 0px;
@@ -262,7 +274,7 @@ body {
           .body-biblioteca .main-biblioteca .main-biblioteca__flex .biblioteca-box div .biblioteca-flex {
             width: 100%;
             margin-bottom: 25px;
-            background-color: #1F4287;
+            background-color: #1f428798;
             display: inline-block; }
             .body-biblioteca .main-biblioteca .main-biblioteca__flex .biblioteca-box div .biblioteca-flex h3 {
               text-align: center;
@@ -378,11 +390,215 @@ body {
   .body-regis .footer-regis {
     grid-area: footer-regis; }
 
+.manga-descripcion {
+  grid-template-areas: "header-manga-descripcion header-manga-descripcion" "main-manga-descripcion main-manga-descripcion" "footer-manga-descripcion footer-manga-descripcion"; }
+  .manga-descripcion header {
+    grid-area: header-manga-descripcion; }
+  .manga-descripcion main {
+    grid-area: main-manga-descripcion;
+    display: grid;
+    grid-template-areas: "div-descripsion div-descripsion div-descripsion"  "capitulo capitulo aside" "memes memes memes"; }
+    .manga-descripcion main .div-descripcion {
+      display: flex;
+      flex-wrap: nowrap;
+      grid-area: div-descripsion;
+      margin-bottom: 50px; }
+      .manga-descripcion main .div-descripcion .img {
+        margin-left: 80px;
+        padding: 8px;
+        width: 100vh;
+        position: relative; }
+        .manga-descripcion main .div-descripcion .img h4 {
+          background-color: #0e2e74a1;
+          width: calc(67% - 16px);
+          position: absolute;
+          text-align: center; }
+        .manga-descripcion main .div-descripcion .img div {
+          width: 65%; }
+          .manga-descripcion main .div-descripcion .img div img {
+            width: 100%; }
+      .manga-descripcion main .div-descripcion .historia-titulo {
+        margin: 8px;
+        margin-right: 80px;
+        padding: 8px;
+        width: 100%;
+        background-color: #0e2e74a1; }
+        .manga-descripcion main .div-descripcion .historia-titulo h2 {
+          text-align: center;
+          padding-bottom: 10px; }
+    .manga-descripcion main .capitulos {
+      background-color: #0e2e74a1;
+      width: 100%;
+      margin: 8px;
+      grid-area: capitulo; }
+      .manga-descripcion main .capitulos h3 {
+        text-align: center;
+        background-color: #071e3d80; }
+      .manga-descripcion main .capitulos div {
+        overflow: auto;
+        height: 500px; }
+        .manga-descripcion main .capitulos div ul li {
+          margin-left: 8px;
+          font-size: 1.3rem; }
+          .manga-descripcion main .capitulos div ul li a:hover {
+            color: #000000; }
+    .manga-descripcion main section {
+      width: 70%;
+      grid-area: memes; }
+      .manga-descripcion main section h4 {
+        background-color: #071e3d80;
+        text-align: center; }
+      .manga-descripcion main section div {
+        padding: 4px;
+        display: grid;
+        grid-template-areas: "chaman eva" "cora video";
+        background-color: #0e2e74a1; }
+        .manga-descripcion main section div .chaman {
+          grid-area: chaman; }
+          .manga-descripcion main section div .chaman img {
+            width: 100%; }
+        .manga-descripcion main section div .eva {
+          grid-area: eva; }
+          .manga-descripcion main section div .eva img {
+            width: 100%; }
+        .manga-descripcion main section div .cora {
+          grid-area: cora; }
+          .manga-descripcion main section div .cora img {
+            width: 100%; }
+        .manga-descripcion main section div iframe {
+          height: 315px;
+          width: 100%;
+          grid-area: video; }
+    .manga-descripcion main .aside {
+      width: 350px;
+      height: 100%;
+      grid-area: aside;
+      margin: auto;
+      margin-top: 50px; }
+      .manga-descripcion main .aside__manhua__chat-web {
+        display: flex;
+        background-color: #1F4287;
+        height: 400px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between; }
+        .manga-descripcion main .aside__manhua__chat-web h2 {
+          background-color: #071E3D;
+          text-align: center;
+          font-size: 21px;
+          color: #1561a8;
+          text-shadow: 1px 1px 4px #278EA5;
+          width: 350px; }
+        .manga-descripcion main .aside__manhua__chat-web__chat {
+          background-color: #fff;
+          width: 330px;
+          height: 320px; }
+        .manga-descripcion main .aside__manhua__chat-web div form {
+          padding: 10px; }
+          .manga-descripcion main .aside__manhua__chat-web div form .text {
+            width: 270px;
+            padding: 5px; }
+  .manga-descripcion footer {
+    grid-area: footer-manga-descripcion; }
+
+.body-uso-usuario header div nav {
+  background-color: #071E3D; }
+  .body-uso-usuario header div nav div div ul form {
+    display: inline-block;
+    margin-right: 50px;
+    padding-bottom: 5px; }
+
+.body-uso-usuario header div nav div .navbar-collapse {
+  justify-content: space-between; }
+  .body-uso-usuario header div nav div .navbar-collapse ul .header-nav-1 {
+    margin-right: 40px; }
+  .body-uso-usuario header div nav div .navbar-collapse ul .header-nav-2 {
+    margin-right: 10px; }
+
+.body-uso-usuario main section div div div .n-usuario {
+  background-color: #1745aa;
+  font-size: 25px; }
+
+.body-uso-usuario main section div div div div .usuario-img {
+  width: 260px;
+  height: 260px; }
+
+.body-uso-usuario main .listas-contenedor {
+  background-color: #071E3D;
+  margin-bottom: 20px; }
+  .body-uso-usuario main .listas-contenedor div div div div .pending-link {
+    padding: 10px 0px 10px 0px; }
+    .body-uso-usuario main .listas-contenedor div div div div .pending-link div a div div .X2 {
+      font-size: 25px; }
+    .body-uso-usuario main .listas-contenedor div div div div .pending-link div a div div .listas-icono {
+      padding-right: 8px; }
+    .body-uso-usuario main .listas-contenedor div div div div .pending-link div a div div .span-lista {
+      display: block;
+      font-size: 23px; }
+
+.body-uso-usuario main div div div div div div .float-right {
+  float: right; }
+
+.body-uso-usuario main div div div div div h3 .icino-x {
+  font-size: 200px; }
+
+.body-uso-usuario main div div div div div a .img-grupos {
+  width: 410px; }
+
+.body-uso-usuario main div div div .aside__top-10 .h2-usuario {
+  background-color: #071e3db4; }
+
+.body-uso-usuario main div div div .aside__top-10 .top-10-n {
+  background-color: #1f428798; }
+  .body-uso-usuario main div div div .aside__top-10 .top-10-n div .aside__top-10__n {
+    background-color: #071e3db4;
+    color: #000000;
+    display: inline-block;
+    padding-left: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px; }
+
+.body-uso-usuario footer {
+  background-color: #071E3D;
+  height: 90px;
+  width: 100%; }
+  .body-uso-usuario footer div .siguenos {
+    text-align: center; }
+    .body-uso-usuario footer div .siguenos nav ul li {
+      display: inline-block;
+      height: 30px;
+      width: 30px;
+      text-align: center; }
+      .body-uso-usuario footer div .siguenos nav ul li a {
+        color: aqua; }
+  .body-uso-usuario footer div .small {
+    text-align: center;
+    height: 20px; }
+    .body-uso-usuario footer div .small small {
+      text-align: center; }
+
+ul {
+  list-style: none; }
+
 /*mesiaqueris*/
 @media screen and (max-width: 540px) {
+  body {
+    max-width: 100%; }
   .home-body {
     background-color: #000;
     grid-template-areas: "header-home header-home" "main-home main-home" "ultima ultima" "memes-home memes-home" "aside-home aside-home" "footer-home footer-home"; }
+  .manga-descripcion main .div-descripcion .historia-titulo {
+    margin-right: 0; }
+  .manga-descripcion main .div-descripcion .img {
+    margin-left: 0; }
+  .manga-descripcion main .capitulos {
+    margin: 10px; }
+  .manga-descripcion main {
+    grid-template-areas: "div-descripsion "  "capitulo" "memes" "aside"; }
+  .manga-descripcion main .div-descripcion {
+    flex-wrap: wrap;
+    justify-content: center; }
   .body-todos .memes-home .img-box .manga div .manga-flex div,
   .body-biblioteca .main-biblioteca .main-biblioteca__flex .biblioteca-box div .biblioteca-flex div .manga-flex div {
     width: 50%; }
@@ -404,9 +620,20 @@ body {
     width: 70%; } }
 
 @media (max-width: 920px) and (min-width: 520px) {
+  body {
+    max-width: 100%; }
+  .manga-descripcion main .div-descripcion .historia-titulo {
+    margin-right: 0; }
+  .manga-descripcion main .div-descripcion .img {
+    margin-left: 0; }
   .home-body {
     background-color: #000;
     grid-template-areas: "header-home header-home" "main-home main-home" "ultima ultima" "memes-home memes-home" "aside-home aside-home" "footer-home footer-home"; }
+  .manga-descripcion main .div-descripcion {
+    flex-wrap: wrap;
+    justify-content: center; }
+  .manga-descripcion main {
+    grid-template-areas: "div-descripsion div-descripsion"  "capitulo capitulo" "memes memes" "aside aside"; }
   .body-todos .memes-home .img-box .manga div .manga-flex div,
   .body-biblioteca .main-biblioteca .main-biblioteca__flex .biblioteca-box div .biblioteca-flex div .manga-flex div,
   .body-todos main .img-box .manga div .manga-flex div {

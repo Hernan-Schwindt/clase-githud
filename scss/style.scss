@@ -3,16 +3,18 @@
 @import "utilities/maps";
 @import "utilities/mixin";
 @import "utilities/extend";
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto Condensed', sans-serif;
 }
+
 //body home
 body {
     color: $color-letra;
-    background:linear-gradient($color-fondo-opacity , $color-fondo-opacity), url(../img/aleatorias/bg-fondo.jpg) no-repeat center center fixed $color-fondo;
+    background: linear-gradient($color-fondo-opacity, $color-fondo-opacity), url(../img/aleatorias/bg-fondo.jpg) no-repeat center center fixed $color-fondo;
     background-size: cover;
     min-height: 100vh;
     max-width: 100%;
@@ -21,36 +23,56 @@ body {
         text-decoration: none;
         color: $color-letra;
     }
-    main{
-        min-height: calc(100vh - 59px - 90px);
+
+    header {
         max-width: 100%;
     }
-    footer{
+
+    main {
+        min-height: calc(100vh - 59px - 90px);
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    footer {
         margin-top: 10px;
+        max-width: 100%;
     }
 
     h1 {
         font-size: 23px;
     }
-    h1,h2,h3,h4,h5,h6{
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         margin-bottom: 0;
     }
-    ul{
+
+    ul {
         margin-bottom: 0;
         padding-left: 0;
     }
-    .header-a{
+
+    .header-a {
         margin-right: 25px;
     }
-    .header-a,.navbar-nav .nav-link.active{
+
+    .header-a,
+    .navbar-nav .nav-link.active {
         color: $color-letra;
     }
+
     select {
         word-wrap: normal;
     }
-    
+
 
 }
+
 .body-todos {
     display: grid;
     align-items: start;
@@ -60,33 +82,39 @@ body {
         "memes aside"
         "footer footer"
     ;
-    .header-home{
+
+    .header-home {
         grid-area: header-home;
     }
+
     header {
         div {
-            .nav-backgro-uso {
+            nav {
                 background-color: $color-primario;
-                              div {
-                                  div {
-                                      ul {
-                                          form {
-                                              display: inline-block;
-                                              margin-right: 50px;
-                                              padding-bottom: 5px;
-                                          }
-                                      }
-                                  }
-                              }
+
+                div {
+                    div {
+                        ul {
+                            form {
+                                display: inline-block;
+                                margin-right: 50px;
+                                padding-bottom: 5px;
+                            }
+                        }
+                    }
+                }
             }
-            nav{
-                div{
+
+            nav {
+                div {
                     .navbar-collapse {
                         justify-content: space-between;
-                        ul{
+
+                        ul {
                             .header-nav-1 {
                                 margin-right: 40px;
                             }
+
                             .header-nav-2 {
                                 margin-right: 10px;
                             }
@@ -96,33 +124,41 @@ body {
             }
         }
     }
+
     /*main home*/
-    .main-home{
+    .main-home {
         grid-area: main-home;
     }
-    main{
-        .img-box{
+
+    main {
+        .img-box {
             margin-top: 57px;
-            .manga{
+
+            .manga {
                 margin-right: 10px;
                 margin-left: 10px;
                 margin-bottom: 25px;
-                background-color: $color-secundario;
+                background-color: $color-secundario-opacity;
                 display: inline-block;
-                h3{
+
+                h3 {
                     background-color: $color-primario;
                     text-align: center;
                 }
-                div{
-                    .manga-flex{
+
+                div {
+                    .manga-flex {
                         @extend %manga-flex;
-                        div{
+
+                        div {
                             @extend %manga-box;
-                            a{
-                                img{
+
+                            a {
+                                img {
                                     @extend %manga-img;
                                 }
-                                img:hover{
+
+                                img:hover {
                                     @extend %manga-img-hover;
                                 }
                             }
@@ -132,24 +168,28 @@ body {
             }
         }
     }
+
     /*todo el aside*/
-    .aside-home{
+    .aside-home {
         display: flex;
         justify-content: center;
         grid-area: aside-home;
-        .aside{
+
+        .aside {
             width: 350px;
             height: 100%;
             margin-top: 57px;
-            &__flex-chat{
-                &__chat-web{
+
+            &__flex-chat {
+                &__chat-web {
                     display: flex;
-                    background-color: $color-secundario ;
+                    background-color: $color-secundario;
                     height: 400px;
                     flex-direction: column;
                     align-items: center;
                     justify-content: space-between;
-                    h2{
+
+                    h2 {
                         background-color: $color-primario;
                         text-align: center;
                         font-size: 21px;
@@ -157,34 +197,41 @@ body {
                         text-shadow: 1px 1px 4px $color-tercero;
                         width: 350px;
                     }
-                    &__chat{
+
+                    &__chat {
                         background-color: $color-cuarto;
                         width: 330px;
                         height: 320px;
                     }
-                    div{
-                        form{
+
+                    div {
+                        form {
                             padding: 10px;
-                            .text{
-                                @include medidas(270px,5px);
+
+                            .text {
+                                @include medidas(270px, 5px);
                             }
                         }
                     }
                 }
-                
+
             }
-            &__discord{
+
+            &__discord {
                 background-color: $color-quinto;
                 height: 56px;
-                div{
-                    h3{
+
+                div {
+                    h3 {
                         text-align: center;
                         padding-top: 11px;
-                        a{
+
+                        a {
                             color: $color-cuarto;
                             font-size: 32px;
                         }
-                        span{
+
+                        span {
                             color: $color-cuarto;
                             font-size: 15px;
                             padding-left: 32px;
@@ -192,28 +239,33 @@ body {
                     }
                 }
             }
-            &__top-10{
-                h2{
-                    background-color: $color-primario;
+
+            &__top-10 {
+                h2 {
+                    background-color: $color-primario-opavity;
                     text-align: center;
                 }
-                &__top-todo{
-                    background-color: $color-secundario;
-                    &__div{
-                        &__n{
+
+                &__top-todo {
+                    background-color: $color-secundario-opacity;
+
+                    &__div {
+                        &__n {
                             text-align: center;
-                            background-color: $color-primario;
+                            background-color: $color-primario-opavity;
                             color: #000;
                             display: inline-block;
                             padding-left: 5px;
                             width: 50px;
                             font-size: 30px;
                         }
-                        b{
-                            a{
+
+                        b {
+                            a {
                                 color: $color-letra;
                             }
-                            a:hover{
+
+                            a:hover {
                                 color: gold;
                                 transition: 0.8s;
                             }
@@ -224,69 +276,87 @@ body {
             }
         }
     }
-    .memes-home{
+
+    .memes-home {
         margin-right: 8px;
         grid-area: memes-home;
-        .memes{
-            background-color: $color-secundario;
+
+        .memes {
+            background-color: $color-sexto-opacity;
             margin-left: 5px;
-            h4{
+
+            h4 {
                 background-color: $color-primario;
                 text-align: center;
                 font-size: 25px;
             }
-            .memes-flex{
+
+            .memes-flex {
                 padding: 4px;
                 display: grid;
                 grid-template-areas:
-                        "chaman eva"
-                        "cora video";
-                .chaman{
+                    "chaman eva"
+                    "cora video";
+
+                .chaman {
                     grid-area: chaman;
-                    img{
-                            width: 100%;
-                        }
-                }
-                .eva{
-                    grid-area: eva;
-                    img{
+
+                    img {
                         width: 100%;
                     }
                 }
-                .cora{
-                    img{
+
+                .eva {
+                    grid-area: eva;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .cora {
+                    img {
                         width: 100%;
                         grid-area: cora;
                     }
                 }
-                iframe{
+
+                iframe {
                     height: 315px;
                     width: 100%;
                     grid-area: video;
                 }
             }
         }
+
         .grid-ultimo {
             grid-area: ultima;
             margin-top: 25px;
         }
-        .img-box{
-            .manga{
-                h3{
+
+        .img-box {
+            margin-left: 10px;
+            .manga {
+                h3 {
                     text-align: center;
                     background-color: $color-primario;
                 }
-                div{
-                    background-color: $color-secundario;
-                    .manga-flex{
+
+                div {
+                    
+                    .manga-flex {
                         @extend %manga-flex;
-                        div{
+                        background-color: $color-secundario-opacity;
+
+                        div {
                             @extend %manga-box;
-                            a{
-                                img{
+
+                            a {
+                                img {
                                     @extend %manga-img;
                                 }
-                                img:hover{
+
+                                img:hover {
                                     @extend %manga-img-hover;
                                 }
                             }
@@ -296,103 +366,124 @@ body {
             }
         }
     }
+
     .footer-home {
         grid-area: footer-home;
     }
-    footer{
+
+    footer {
         background-color: $color-primario;
         height: 90px;
         width: 100%;
-        div{
-            .siguenos{
+
+        div {
+            .siguenos {
                 text-align: center;
-                nav{
-                    ul{
-                        li{
+
+                nav {
+                    ul {
+                        li {
                             display: inline-block;
                             height: 30px;
                             width: 30px;
                             text-align: center;
-                            a{
+
+                            a {
                                 color: aqua;
                             }
                         }
                     }
                 }
             }
-            .small{
+
+            .small {
                 text-align: center;
                 height: 20px;
-                small{
+
+                small {
                     text-align: center;
                 }
             }
         }
     }
 }
-.home-body{
+
+.home-body {
     grid-template-areas: "header-home header-home"
-                         "main-home aside-home"
-                         "ultima aside-home"
-                         "memes-home aside-home"
-                         "footer-home footer-home"
-        ;
+        "main-home aside-home"
+        "ultima aside-home"
+        "memes-home aside-home"
+        "footer-home footer-home"
+    ;
 }
-.body-biblioteca{
+
+.body-biblioteca {
     grid-template-areas:
-    "header-biblioteca header-biblioteca"
-    "main-biblioteca main-biblioteca"
-    "footer-biblioteca footer-biblioteca";
+        "header-biblioteca header-biblioteca"
+        "main-biblioteca main-biblioteca"
+        "footer-biblioteca footer-biblioteca";
+
     .header-biblioteca {
         grid-area: header-biblioteca;
     }
-    .main-biblioteca{
+
+    .main-biblioteca {
         grid-area: main-biblioteca;
-        div{
+
+        div {
             grid-area: aside-buscador aside-buscador;
-            .main-biblioteca__form{
+
+            .main-biblioteca__form {
                 background-color: $color-secundario;
                 height: 45px;
                 margin-top: 25px;
                 margin-bottom: 20px;
-                input{
+
+                input {
                     margin-top: 5px;
                 }
-                .main-biblioteca__form__buscador{
+
+                .main-biblioteca__form__buscador {
                     width: 50%;
                     height: 30px;
                     font-size: 18px;
                     margin-left: 10px;
                 }
-                .main-biblioteca__form__enviar{
+
+                .main-biblioteca__form__enviar {
                     padding: 4px;
                 }
             }
         }
-        .main-biblioteca__flex{
+
+        .main-biblioteca__flex {
             display: flex;
             flex-wrap: nowrap;
             grid-area: main-biblioteca;
+
             .main-biblioteca__aside {
-                background-color: $color-secundario;
+                background-color: $color-secundario-opacity;
                 display: map-get($map: $biblioteca__aside, $key: biblioteca-display);
-                width: map-get($map: $biblioteca__aside , $key: biblioteca-width );
-                margin-top: map-get($map: $biblioteca__aside , $key: biblioteca-margin-top );
-                margin-left: map-get($map: $biblioteca__aside , $key: biblioteca-margin-left );
-                margin-right: map-get($map: $biblioteca__aside , $key: biblioteca-margin-right );
+                width: map-get($map: $biblioteca__aside, $key: biblioteca-width);
+                margin-top: map-get($map: $biblioteca__aside, $key: biblioteca-margin-top);
+                margin-left: map-get($map: $biblioteca__aside, $key: biblioteca-margin-left);
+                margin-right: map-get($map: $biblioteca__aside, $key: biblioteca-margin-right);
                 grid-area: aside-biblioteca;
-                div{
+
+                div {
                     .main-biblioteca__aside__h4 {
                         text-align: center;
                         background-color: $color-primario;
                         width: 100%;
                     }
-                    div{
+
+                    div {
                         text-align: center;
                     }
                 }
-                div{
-                    div{
+
+                div {
+                    div {
                         .main-biblioteca__aside__h4 {
                             text-align: center;
                             background-color: $color-primario;
@@ -400,7 +491,8 @@ body {
                         }
                     }
                 }
-                div{
+
+                div {
                     .main-biblioteca__aside__h4 {
                         text-align: center;
                         background-color: $color-primario;
@@ -408,38 +500,47 @@ body {
                     }
                 }
             }
-            .biblioteca-box{
+
+            .biblioteca-box {
                 display: inline-block;
                 margin-top: 0px;
-                div{
+
+                div {
                     width: 100%;
-                    .biblioteca-flex{
+
+                    .biblioteca-flex {
                         width: 100%;
                         margin-bottom: 25px;
-                        background-color: $color-secundario;
+                        background-color: $color-secundario-opacity;
                         display: inline-block;
+
                         h3 {
                             text-align: center;
                             background-color: $color-primario;
                         }
-                        div{
+
+                        div {
                             .manga-flex {
                                 padding: 5px;
                                 @extend %manga-flex;
+
                                 div {
                                     @extend %manga-box;
-                                    a{
-                                        img{
+
+                                    a {
+                                        img {
                                             @extend %manga-img;
                                         }
-                                        img:hover{
+
+                                        img:hover {
                                             @extend %manga-img-hover;
                                         }
                                     }
                                 }
                             }
                         }
-                        .botones-de-cambio{
+
+                        .botones-de-cambio {
                             display: flex;
                             justify-content: space-between;
                         }
@@ -448,58 +549,72 @@ body {
             }
         }
     }
+
     .footer-biblioteca {
         grid-area: footer-biblioteca;
     }
 }
-.body-form{
+
+.body-form {
     grid-template-areas:
         "header-formu"
         "main-formu"
         "footer-formu";
-    .main-formu{
+
+    .main-formu {
         grid-area: main-formu;
         margin-top: 10px;
-        .mein-form{
+
+        .mein-form {
             display: flex;
             align-items: center;
             width: 100%;
-            .main-form__flex{
+
+            .main-form__flex {
                 margin: 0 auto;
-                div{
-                    .formulario{
-                        fieldset{
+
+                div {
+                    .formulario {
+                        fieldset {
                             text-align: center;
                             background-color: $color-sexto-opacity;
                             width: 470px;
-                            h2{
+
+                            h2 {
                                 text-align: center;
                                 margin-top: 25px;
                                 margin-bottom: 10px;
                             }
+
                             .apellido-nombre {
                                 margin-bottom: 5px;
-                                input{
+
+                                input {
                                     background: $color-sexto-opacity;
                                     font-size: $color-letra;
                                 }
                             }
+
                             .genero {
                                 margin-left: -200px;
                             }
-                            .mail{
+
+                            .mail {
                                 input {
                                     margin-left: -90px;
                                 }
+
                                 .text-asunto {
                                     margin-left: -10px;
                                     margin-top: 5px;
                                     margin-bottom: 5px;
+
                                     textarea {
                                         width: 350px;
                                     }
                                 }
                             }
+
                             .form-enviar {
                                 margin-left: 300px;
                                 margin-bottom: 20px;
@@ -511,103 +626,499 @@ body {
         }
     }
 }
-.cap-img-body{
+
+.cap-img-body {
     display: inline-block;
-    main{
-        .cap-t{
+
+    main {
+        .cap-t {
             text-align: center;
             background-color: $color-quinto;
-            h2{
+
+            h2 {
                 color: $color-negro;
             }
-            h3{
+
+            h3 {
                 @extend %manga-flex;
                 justify-content: center;
-                span{
-                    color: $color-azul ;
+
+                span {
+                    color: $color-azul;
                 }
             }
         }
-        .cap-img{
-            img{
+
+        .cap-img {
+            img {
                 width: 100%;
             }
         }
-        .siguiente-cap{
+
+        .siguiente-cap {
             display: flex;
             justify-content: space-between;
-            padding: 10px ;
+            padding: 10px;
             background-color: $color-sexto;
         }
     }
-    .footer-cap{
+
+    .footer-cap {
         margin-top: 0;
     }
 }
+
 .body-regis {
     grid-template-areas:
         "header-regis"
         "main-regis"
         "footer-regis";
+    align-items: center;
+
+    .header-regis {
+        grid-area: header-regis;
+    }
+
+    .main-form {
+        grid-area: main-regis;
+        display: flex;
         align-items: center;
-        .header-regis {
-            grid-area: header-regis;
+        width: 100%;
+
+        &__flex {
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+
+            .box-form {
+                height: 250px;
+
+                .formulario {
+                    fieldset {
+                        text-align: center;
+                        background-color: #1745aa;
+                        width: 470px;
+
+                        h2 {
+                            text-align: center;
+                            margin-top: 25px;
+                            margin-bottom: 10px;
+                        }
+
+                        .apellido-nombre {
+                            margin-bottom: 5px;
+                        }
+
+                        .genero {
+                            margin-left: -200px;
+                        }
+
+                        .mail {
+                            input {
+                                margin-left: -90px;
+                            }
+
+                            .password {
+                                margin-top: 5px;
+                                margin-bottom: 5px;
+                                margin-left: 95px;
+
+                                input {
+                                    margin-left: -90px;
+                                }
+
+                                .repetir-password {
+                                    margin-left: 5px;
+                                }
+                            }
+                        }
+
+                        .form-enviar {
+                            margin-left: 300px;
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
         }
-        .main-form {
-            grid-area: main-regis;
-                display: flex;
-                align-items: center;
+    }
+
+    .footer-regis {
+        grid-area: footer-regis;
+    }
+}
+
+.manga-descripcion {
+    grid-template-areas: "header-manga-descripcion header-manga-descripcion"
+        "main-manga-descripcion main-manga-descripcion"
+        "footer-manga-descripcion footer-manga-descripcion"
+    ;
+
+    header {
+        grid-area: header-manga-descripcion;
+    }
+
+    main {
+        grid-area: main-manga-descripcion;
+        display: grid;
+        grid-template-areas:"div-descripsion div-descripsion div-descripsion" 
+                            "capitulo capitulo aside"
+                            "memes memes memes"
+        ;
+
+        .div-descripcion {
+            display: flex;
+            flex-wrap: nowrap;
+            grid-area: div-descripsion;
+            margin-bottom: 50px;
+            .img {
+                margin-left: 80px;
+                padding: 8px;
+                width: 100vh;
+                position: relative;
+
+                h4 {
+                    background-color: $color-sexto-opacity;
+                    width: calc(67% - 16px);
+                    position: absolute;
+                    text-align: center;
+                }
+
+                div {
+                    width: 65%;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .historia-titulo {
+                margin: 8px;
+                margin-right: 80px;
+                padding: 8px;
                 width: 100%;
-                &__flex {
+                background-color: $color-sexto-opacity;
+
+                h2 {
+                    text-align: center;
+                    padding-bottom: 10px;
+                }
+            }
+        }
+
+        .capitulos {
+            background-color: $color-sexto-opacity;
+            width: 100%;
+            margin: 8px;
+            grid-area: capitulo;
+
+            h3 {
+                text-align: center;
+                background-color: $color-primario-opacity;
+            }
+
+            div {
+                overflow: auto;
+                height: 500px;
+
+                ul {
+                    li {
+                        margin-left: 8px;
+                        font-size: 1.3rem;
+
+                        a:hover {
+                            color: $color-negro;
+
+                        }
+                    }
+                }
+            }
+        }
+
+        section {
+            width: 70%;
+            grid-area: memes;
+
+            h4 {
+                background-color: $color-primario-opacity;
+                text-align: center;
+            }
+
+            div {
+                padding: 4px;
+                display: grid;
+                grid-template-areas:
+                    "chaman eva"
+                    "cora video";
+                background-color: $color-sexto-opacity;
+
+                .chaman {
+                    grid-area: chaman;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .eva {
+                    grid-area: eva;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .cora {
+                    grid-area: cora;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                iframe {
+                    height: 315px;
+                    width: 100%;
+                    grid-area: video;
+                }
+            }
+        }
+
+        .aside {
+            width: 350px;
+            height: 100%;
+            grid-area: aside;
+            margin: auto;
+            margin-top: 50px;
+            &__manhua {
+                &__chat-web {
                     display: flex;
-                    justify-content: center;
-                    margin: 0 auto;
-                    .box-form {
-                        height: 250px;
-                        .formulario{
-                            fieldset {
-                                text-align: center;
-                                background-color: #1745aa;
-                                width: 470px;
-                                h2 {
-                                    text-align: center;
-                                    margin-top: 25px;
-                                    margin-bottom: 10px;
-                                }
-                                .apellido-nombre {
-                                    margin-bottom: 5px;
-                                }
-                                .genero {
-                                    margin-left: -200px;
-                                }
-                                .mail{
-                                    input {
-                                        margin-left: -90px;
-                                    }
-                                    .password {
-                                        margin-top: 5px;
-                                        margin-bottom: 5px;
-                                        margin-left: 95px;
-                                        input {
-                                            margin-left: -90px;
+                    background-color: $color-secundario;
+                    height: 400px;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    h2 {
+                        background-color: $color-primario;
+                        text-align: center;
+                        font-size: 21px;
+                        color: rgb(21, 97, 168);
+                        text-shadow: 1px 1px 4px $color-tercero;
+                        width: 350px;
+                    }
+
+                    &__chat {
+                        background-color: $color-cuarto;
+                        width: 330px;
+                        height: 320px;
+                    }
+
+                    div {
+                        form {
+                            padding: 10px;
+
+                            .text {
+                                @include medidas(270px, 5px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        grid-area: footer-manga-descripcion;
+    }
+
+}
+.body-uso-usuario{
+    header {
+        div {
+            nav {
+                background-color: $color-primario;
+
+                div {
+                    div {
+                        ul {
+                            form {
+                                display: inline-block;
+                                margin-right: 50px;
+                                padding-bottom: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            nav {
+                div {
+                    .navbar-collapse {
+                        justify-content: space-between;
+
+                        ul {
+                            .header-nav-1 {
+                                margin-right: 40px;
+                            }
+
+                            .header-nav-2 {
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    main{
+        section{
+            div{
+                div{
+                    div{
+                        .n-usuario {
+                            background-color: $color-sexto;
+                            font-size: 25px;
+                        }
+                        div{
+                            .usuario-img {
+                                width: 260px;
+                                height: 260px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .listas-contenedor {
+            background-color: $color-primario;
+            margin-bottom: 20px;
+            div{
+                div{
+                    div{
+                        div{
+                            .pending-link {
+                                padding: 10px 0px 10px 0px;
+                                div{
+                                    a{
+                                        div{
+                                            div{
+                                                .X2 {
+                                                    font-size: 25px;
+                                                }
+                                                .listas-icono {
+                                                    padding-right: 8px;
+                                                }
+                                            }
+                                            div{
+                                                .span-lista {
+                                                    display: block;
+                                                    font-size: 23px;
+                                                }
+                                            }
                                         }
-                                        .repetir-password {
-                                            margin-left: 5px;
-                                        }
                                     }
-                                }
-                                .form-enviar {
-                                    margin-left: 300px;
-                                    margin-bottom: 20px;
                                 }
                             }
                         }
                     }
                 }
+            }
         }
-        .footer-regis {
-            grid-area: footer-regis;
+        div{
+            div{
+                div{
+                    div{
+                        div{
+                            div{
+                                .float-right {
+                                    float: right;
+                                }
+                            }
+                        }
+                        div{
+                            h3{
+                                .icino-x {
+                                    font-size: 200px;
+                                }
+                            }
+                        }
+                        div{
+                            h3{
+
+                            }
+                        }
+                        div{
+                            a{
+                                .img-grupos {
+                                    width: 410px;
+                                }
+                            }
+                        }
+                    }
+                    .aside__top-10{
+                        .h2-usuario {
+                            background-color: $color-primario-opavity;
+                        }
+                        .top-10-n {
+                            background-color: $color-secundario-opacity;
+                            div{
+                                .aside__top-10__n {
+                                    background-color: $color-primario-opavity;
+                                    color: $color-negro;
+                                    display: inline-block;
+                                    padding-left: 5px;
+                                    width: 40px;
+                                    height: 40px;
+                                    font-size: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
+    }
+    footer {
+        background-color: $color-primario;
+        height: 90px;
+        width: 100%;
+
+        div {
+            .siguenos {
+                text-align: center;
+
+                nav {
+                    ul {
+                        li {
+                            display: inline-block;
+                            height: 30px;
+                            width: 30px;
+                            text-align: center;
+
+                            a {
+                                color: aqua;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .small {
+                text-align: center;
+                height: 20px;
+
+                small {
+                    text-align: center;
+                }
+            }
+        }
+    }
 }
+
+ul {
+    list-style: none;
+}
+
 /*mesiaqueris*/
 @import "utilities/mediaqueris";
