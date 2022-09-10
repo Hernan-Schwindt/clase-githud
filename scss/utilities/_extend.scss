@@ -1,6 +1,6 @@
 %manga-box{
-    width: 20%;
-    padding: 5px;
+    width: calc(20% - 10px);
+    margin: 5px;
     overflow: hidden;
 }
 %manga-img{
@@ -19,4 +19,58 @@
     display: flex;
     align-items: center;
     width: 100%;
+}
+%forms-enviar{
+    padding: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background: #071e3db4;
+    color: #D9FAFF;
+    border: 1px solid #071e3d80;
+    transition: 0.5s;
+}
+%buttom-todos{
+    margin: 5px;
+    padding: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background: $color-primario-opavity;
+    color: $color-letra;
+    border: 1px solid $color-primario-opacity;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+}
+%box-button{
+    display: flex;
+    justify-content: space-between;
+}
+%buttom-todos-hover{
+    border: 1px solid $color-aqua;
+}
+%i-buttom-1{
+    color: $color-letra;
+    font-size: 20px;
+    margin-right: 5px;
+}
+%i-buttom-2{
+    color: $color-letra;
+    font-size: 20px;
+    margin-left: 5px;
+}
+%input-todos{
+    background-color: $color-secundario-opacity;
+    border:3px solid $color-secundario-opacity;
+    border-radius: 5px;
+    transition: 0.7s;
+}
+%input-hover{
+    border: 2px solid $color-aqua;
+}
+%input-focus{
+    outline: none;
+    border-bottom: 3px solid $color-aqua;
+}
+%padding-10px{
+    padding: 10px;
 }

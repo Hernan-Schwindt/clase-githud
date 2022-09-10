@@ -164,6 +164,28 @@ body {
                             }
                         }
                     }
+
+                    .boton-de-mostrar-mas {
+                        @extend %box-button;
+                        justify-content: center;
+
+                        button {
+                            @extend %buttom-todos;
+                            justify-content: center;
+
+                            .i-1 {
+                                @extend %i-buttom-1;
+                            }
+
+                            .i-2 {
+                                @extend %i-buttom-2;
+                            }
+                        }
+
+                        button:hover {
+                            @extend %buttom-todos-hover;
+                        }
+                    }
                 }
             }
         }
@@ -296,7 +318,8 @@ body {
                 display: grid;
                 grid-template-areas:
                     "chaman eva"
-                    "cora video";
+                    "cora video"
+                    "boton-de-mostrar-mas boton-de-mostrar-mas";
 
                 .chaman {
                     grid-area: chaman;
@@ -326,6 +349,28 @@ body {
                     width: 100%;
                     grid-area: video;
                 }
+
+                .boton-de-mostrar-mas {
+                    grid-area: boton-de-mostrar-mas;
+                    @extend %box-button;
+                    justify-content: center;
+
+                    button {
+                        @extend %buttom-todos;
+
+                        .i-1 {
+                            @extend %i-buttom-1;
+                        }
+
+                        .i-2 {
+                            @extend %i-buttom-2;
+                        }
+                    }
+
+                    button:hover {
+                        @extend %buttom-todos-hover;
+                    }
+                }
             }
         }
 
@@ -336,6 +381,7 @@ body {
 
         .img-box {
             margin-left: 10px;
+
             .manga {
                 h3 {
                     text-align: center;
@@ -343,10 +389,10 @@ body {
                 }
 
                 div {
-                    
+                    background-color: $color-secundario-opacity;
+
                     .manga-flex {
                         @extend %manga-flex;
-                        background-color: $color-secundario-opacity;
 
                         div {
                             @extend %manga-box;
@@ -360,6 +406,34 @@ body {
                                     @extend %manga-img-hover;
                                 }
                             }
+                        }
+                    }
+
+                    .botones-de-cambio {
+                        @extend %box-button;
+
+                        .anterior {
+                            @extend %buttom-todos;
+
+                            i {
+                                @extend %i-buttom-1;
+                            }
+                        }
+
+                        .anterior:hover {
+                            @extend %buttom-todos-hover;
+                        }
+
+                        .siguiente {
+                            @extend %buttom-todos;
+
+                            i {
+                                @extend %i-buttom-2;
+                            }
+                        }
+
+                        .siguiente:hover {
+                            @extend %buttom-todos-hover;
                         }
                     }
                 }
@@ -460,6 +534,7 @@ body {
             display: flex;
             flex-wrap: nowrap;
             grid-area: main-biblioteca;
+            max-width: 100%;
 
             .main-biblioteca__aside {
                 background-color: $color-secundario-opacity;
@@ -541,8 +616,31 @@ body {
                         }
 
                         .botones-de-cambio {
-                            display: flex;
-                            justify-content: space-between;
+                            @extend %box-button;
+
+                            .anterior {
+                                @extend %buttom-todos;
+
+                                i {
+                                    @extend %i-buttom-1;
+                                }
+                            }
+
+                            .anterior:hover {
+                                @extend %buttom-todos-hover;
+                            }
+
+                            .siguiente {
+                                @extend %buttom-todos;
+
+                                i {
+                                    @extend %i-buttom-2;
+                                }
+                            }
+
+                            .siguiente:hover {
+                                @extend %buttom-todos-hover;
+                            }
                         }
                     }
                 }
@@ -572,13 +670,17 @@ body {
 
             .main-form__flex {
                 margin: 0 auto;
+                margin-top: 50px;
+                margin-bottom: 50px;
 
                 div {
                     .formulario {
+                        @extend %padding-10px;
                         fieldset {
                             text-align: center;
                             background-color: $color-sexto-opacity;
-                            width: 470px;
+                            width: 100%;
+                            padding: 20px;
 
                             h2 {
                                 text-align: center;
@@ -590,18 +692,38 @@ body {
                                 margin-bottom: 5px;
 
                                 input {
-                                    background: $color-sexto-opacity;
-                                    font-size: $color-letra;
+                                    @extend %input-todos;
                                 }
-                            }
-
-                            .genero {
-                                margin-left: -200px;
+                                input:hover{
+                                    @extend %input-hover;
+                                }
+                                input:focus{
+                                    @extend %input-focus;
+                                }
                             }
 
                             .mail {
                                 input {
-                                    margin-left: -90px;
+                                    margin-left: -78px;
+                                    @extend %input-todos;
+                                }
+                                input:hover{
+                                    @extend %input-hover;
+                                }
+                                input:focus{
+                                    @extend %input-focus;
+                                }
+                                select{
+                                    @extend %input-todos;
+                                    option{
+                                        background-color: $color-sexto-opacity;
+                                    }
+                                }
+                                select:hover{
+                                    @extend %input-hover;
+                                }
+                                select:focus{
+                                    @extend %input-focus;
                                 }
 
                                 .text-asunto {
@@ -610,15 +732,29 @@ body {
                                     margin-bottom: 5px;
 
                                     textarea {
-                                        width: 350px;
+                                        width: 85%;
+                                        @extend %input-todos;
+                                    }
+                                    textarea:hover{
+                                        @extend %input-hover;
+                                    }
+                                    textarea:focus{
+                                        @extend %input-focus;
                                     }
                                 }
                             }
 
-                            .form-enviar {
-                                margin-left: 300px;
-                                margin-bottom: 20px;
-                            }
+                            
+                                .form-enviar {
+                                    margin-top: 20px;
+                                    margin-bottom: 20px;
+                                    width: 100%;
+                                    @extend %forms-enviar;
+                                }
+                                .form-enviar:hover{
+                                    @extend %buttom-todos-hover;
+                                }
+                            
                         }
                     }
                 }
@@ -692,12 +828,15 @@ body {
 
             .box-form {
                 height: 250px;
-
+                margin-top: 50px;
+                margin-bottom: 50px;
                 .formulario {
+                    @extend %padding-10px;
                     fieldset {
                         text-align: center;
-                        background-color: #1745aa;
-                        width: 470px;
+                        background-color: $color-sexto-opacity;
+                        padding: 20px;
+                        width: 100%;
 
                         h2 {
                             text-align: center;
@@ -707,15 +846,45 @@ body {
 
                         .apellido-nombre {
                             margin-bottom: 5px;
+                            input{
+                                @extend %input-todos;
+                            }
+                            input:hover{
+                                @extend %input-hover;
+                            }
+                            input:focus{
+                                @extend %input-focus;
+                            }
                         }
 
                         .genero {
-                            margin-left: -200px;
+                            label{
+                                color:$color-negro;
+                            }
                         }
 
                         .mail {
                             input {
-                                margin-left: -90px;
+                                margin-left: -80px;
+                                @extend %input-todos;
+                            }
+                            input:hover{
+                                @extend %input-hover;
+                            }
+                            input:focus{
+                                @extend %input-focus;
+                            }
+                            select{
+                                @extend %input-todos;
+                                option{
+                                    background-color: $color-sexto-opacity;
+                                }
+                            }
+                            select:hover{
+                                @extend %input-hover;
+                            }
+                            select:focus{
+                                @extend %input-focus;
                             }
 
                             .password {
@@ -732,10 +901,17 @@ body {
                                 }
                             }
                         }
-
+                        .box-enviar{
+                            
                         .form-enviar {
-                            margin-left: 300px;
+                            margin-top: 20px;
                             margin-bottom: 20px;
+                            width: 100%;
+                            @extend %forms-enviar;
+                        }
+                        .form-enviar:hover{
+                            @extend %buttom-todos-hover;
+                        }
                         }
                     }
                 }
@@ -761,9 +937,9 @@ body {
     main {
         grid-area: main-manga-descripcion;
         display: grid;
-        grid-template-areas:"div-descripsion div-descripsion div-descripsion" 
-                            "capitulo capitulo aside"
-                            "memes memes memes"
+        grid-template-areas: "div-descripsion div-descripsion div-descripsion"
+            "capitulo capitulo aside"
+            "memes memes memes"
         ;
 
         .div-descripcion {
@@ -771,64 +947,68 @@ body {
             flex-wrap: nowrap;
             grid-area: div-descripsion;
             margin-bottom: 50px;
+            margin-top:20px;
+
             .img {
                 margin-left: 80px;
                 padding: 8px;
-                width: 100vh;
+                width: 65%;
                 position: relative;
 
                 h4 {
                     background-color: $color-sexto-opacity;
-                    width: calc(67% - 16px);
+                    width: calc(100% - 16px);
                     position: absolute;
                     text-align: center;
                 }
 
-                div {
-                    width: 65%;
-                    img {
-                        width: 100%;
-                    }
+                img {
+                    width: 100%;
                 }
             }
 
-            .historia-titulo {
-                margin: 8px;
-                margin-right: 80px;
-                padding: 8px;
-                width: 100%;
-                background-color: $color-sexto-opacity;
+            div {
+                 padding: 8px;
+                 padding-right: 80px;
+                .historia-titulo {
 
-                h2 {
-                    text-align: center;
-                    padding-bottom: 10px;
+                    padding: 8px;
+                    width: 100%;
+                    background-color: $color-sexto-opacity;
+
+                    h2 {
+                        text-align: center;
+                        padding-bottom: 10px;
+                    }
                 }
             }
         }
 
-        .capitulos {
-            background-color: $color-sexto-opacity;
-            width: 100%;
-            margin: 8px;
+        .box-capitulos {
+            padding: 8px;
             grid-area: capitulo;
+            .capitulos {
+                background-color: $color-sexto-opacity;
+                width: 100%;
 
-            h3 {
-                text-align: center;
-                background-color: $color-primario-opacity;
-            }
+                h3 {
+                    text-align: center;
+                    background-color: $color-primario-opacity;
+                }
 
-            div {
-                overflow: auto;
-                height: 500px;
+                div {
+                    overflow: auto;
+                    height: 500px;
 
-                ul {
-                    li {
-                        margin-left: 8px;
-                        font-size: 1.3rem;
+                    ul {
+                        li {
+                            margin-left: 8px;
+                            font-size: 1.3rem;
 
-                        a:hover {
-                            color: $color-negro;
+                            a:hover {
+                                color: $color-negro;
 
+                            }
                         }
                     }
                 }
@@ -836,8 +1016,10 @@ body {
         }
 
         section {
+            margin-top: 20px;
             width: 70%;
             grid-area: memes;
+            padding: 8px;
 
             h4 {
                 background-color: $color-primario-opacity;
@@ -890,6 +1072,7 @@ body {
             grid-area: aside;
             margin: auto;
             margin-top: 50px;
+
             &__manhua {
                 &__chat-web {
                     display: flex;
@@ -933,7 +1116,8 @@ body {
     }
 
 }
-.body-uso-usuario{
+
+.body-uso-usuario {
     header {
         div {
             nav {
@@ -971,16 +1155,18 @@ body {
             }
         }
     }
-    main{
-        section{
-            div{
-                div{
-                    div{
+
+    main {
+        section {
+            div {
+                div {
+                    div {
                         .n-usuario {
                             background-color: $color-sexto;
                             font-size: 25px;
                         }
-                        div{
+
+                        div {
                             .usuario-img {
                                 width: 260px;
                                 height: 260px;
@@ -990,27 +1176,32 @@ body {
                 }
             }
         }
+
         .listas-contenedor {
             background-color: $color-primario;
             margin-bottom: 20px;
-            div{
-                div{
-                    div{
-                        div{
+
+            div {
+                div {
+                    div {
+                        div {
                             .pending-link {
                                 padding: 10px 0px 10px 0px;
-                                div{
-                                    a{
-                                        div{
-                                            div{
+
+                                div {
+                                    a {
+                                        div {
+                                            div {
                                                 .X2 {
                                                     font-size: 25px;
                                                 }
+
                                                 .listas-icono {
                                                     padding-right: 8px;
                                                 }
                                             }
-                                            div{
+
+                                            div {
                                                 .span-lista {
                                                     display: block;
                                                     font-size: 23px;
@@ -1025,44 +1216,45 @@ body {
                 }
             }
         }
-        div{
-            div{
-                div{
-                    div{
-                        div{
-                            div{
+
+        div {
+            div {
+                div {
+                    div {
+                        div {
+                            div {
                                 .float-right {
                                     float: right;
                                 }
                             }
                         }
-                        div{
-                            h3{
+
+                        div {
+                            h3 {
                                 .icino-x {
                                     font-size: 200px;
                                 }
                             }
                         }
-                        div{
-                            h3{
 
-                            }
-                        }
-                        div{
-                            a{
+                        div {
+                            a {
                                 .img-grupos {
                                     width: 410px;
                                 }
                             }
                         }
                     }
-                    .aside__top-10{
+
+                    .aside__top-10 {
                         .h2-usuario {
                             background-color: $color-primario-opavity;
                         }
+
                         .top-10-n {
                             background-color: $color-secundario-opacity;
-                            div{
+
+                            div {
                                 .aside__top-10__n {
                                     background-color: $color-primario-opavity;
                                     color: $color-negro;
@@ -1079,6 +1271,7 @@ body {
             }
         }
     }
+
     footer {
         background-color: $color-primario;
         height: 90px;

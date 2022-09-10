@@ -1,3 +1,20 @@
+@media screen and (max-width:430px){
+    .body-regis .main-form__flex .box-form .formulario fieldset .apellido-nombre input,
+    .body-form .main-formu .mein-form .main-form__flex div .formulario fieldset .apellido-nombre input{
+        width: 40%;
+    }
+    
+    .body-regis .main-form__flex .box-form .formulario fieldset .mail input,
+    .body-form .main-formu .mein-form .main-form__flex div .formulario fieldset .mail input  {
+        margin-left: -0px;
+    }
+    .body-regis .main-form__flex .box-form .formulario fieldset .mail .password input{
+        width: 60%;
+    }
+    .body-form .main-formu .mein-form .main-form__flex div .formulario fieldset .mail .text-asunto textarea{
+        margin-left: 10px;
+    }
+}
 @media screen and (max-width:540px) {
     body{
         max-width: 100%;
@@ -19,9 +36,11 @@
     .manga-descripcion main .div-descripcion .img{
         margin-left: 0;
     }
-    .manga-descripcion main .capitulos{
-        margin: 10px;
+    .manga-descripcion main .div-descripcion div{
+        padding: 20px;
     }
+    
+    
     .manga-descripcion main{
         grid-template-areas:"div-descripsion " 
                             "capitulo"
@@ -34,29 +53,15 @@
         justify-content: center;
     }
         .body-todos .memes-home .img-box .manga div .manga-flex div,
-        .body-biblioteca .main-biblioteca .main-biblioteca__flex .biblioteca-box div .biblioteca-flex div .manga-flex div
+        .body-biblioteca .main-biblioteca .main-biblioteca__flex .biblioteca-box div .biblioteca-flex div .manga-flex div,
+        .body-todos main .img-box .manga div .manga-flex div
          {
-            width: 50%;
+            width: calc(50% - 10px);
         }
         .aside-height {
             display: flex;
             justify-content: center;
         }
-    .body-todos {
-        main {
-            .img-box {
-                .manga {
-                    div {
-                        .manga-flex {
-                            div {
-                                width: 50%;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
     .body-biblioteca .main-biblioteca .main-biblioteca__flex{
         display: flex;
         flex-wrap: wrap;
@@ -66,13 +71,17 @@
     }
     .body-biblioteca .main-biblioteca .main-biblioteca__flex .main-biblioteca__aside div .main-biblioteca__aside__h4,
     .body-biblioteca .main-biblioteca .main-biblioteca__flex .main-biblioteca__aside div div .main-biblioteca__aside__h4, 
-    .body-biblioteca .main-biblioteca div .main-biblioteca__form{
+    .body-biblioteca .main-biblioteca div .main-biblioteca__form,
+    .manga-descripcion main section{
         width: 100%;
     }
     .body-biblioteca .main-biblioteca div .main-biblioteca__form .main-biblioteca__form__buscador{
         width: 70%;
     }
 }
+
+
+
 @media (max-width:920px) and (min-width:520px) {
     body{
         max-width: 100%;
@@ -95,6 +104,9 @@
         ;
 
     }
+    .manga-descripcion main .div-descripcion div{
+        padding: 20px;
+    }
     .manga-descripcion main .div-descripcion{
         flex-wrap:wrap;
         justify-content: center;
@@ -109,8 +121,8 @@
     .body-todos .memes-home .img-box .manga div .manga-flex div,
     .body-biblioteca .main-biblioteca .main-biblioteca__flex .biblioteca-box div .biblioteca-flex div .manga-flex div,
     .body-todos main .img-box .manga  div .manga-flex div{
-        width: 33.33%;
-    }º
+        width: calc(33.33% - 10px);
+    }
     .body-biblioteca .main-biblioteca .main-biblioteca__flex{
         display: flex;
         flex-wrap: wrap;
@@ -120,7 +132,8 @@
     }
     .body-biblioteca .main-biblioteca .main-biblioteca__flex .main-biblioteca__aside div .main-biblioteca__aside__h4,
     .body-biblioteca .main-biblioteca .main-biblioteca__flex .main-biblioteca__aside div div .main-biblioteca__aside__h4, 
-    .body-biblioteca .main-biblioteca div .main-biblioteca__form{
+    .body-biblioteca .main-biblioteca div .main-biblioteca__form,
+    .manga-descripcion main section{
         width: 100%;
     }
     .body-biblioteca .main-biblioteca div .main-biblioteca__form .main-biblioteca__form__buscador{
