@@ -35,8 +35,9 @@
     }
     .manga-descripcion main .div-descripcion .img{
         margin-left: 0;
+        width: 45%;
     }
-    .manga-descripcion main .div-descripcion div{
+    .manga-descripcion main .div-descripcion .historia-div{
         padding: 20px;
     }
     
@@ -91,6 +92,7 @@
     }
     .manga-descripcion main .div-descripcion .img{
         margin-left: 0;
+        width: 45%;
     }
     .home-body {
 
@@ -104,7 +106,7 @@
         ;
 
     }
-    .manga-descripcion main .div-descripcion div{
+    .manga-descripcion main .div-descripcion .historia-div{
         padding: 20px;
     }
     .manga-descripcion main .div-descripcion{
@@ -138,5 +140,12 @@
     }
     .body-biblioteca .main-biblioteca div .main-biblioteca__form .main-biblioteca__form__buscador{
         width: 60%;
+    }
+}
+@media screen and (min-width:920px){
+    
+    .manga-descripcion main .div-descripcion .img{
+        max-width: 260px;
+        min-width: 220px;
     }
 }

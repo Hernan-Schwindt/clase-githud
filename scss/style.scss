@@ -24,6 +24,10 @@ body {
         color: $color-letra;
     }
 
+    a:hover {
+        color: $color-letra;
+    }
+
     header {
         max-width: 100%;
     }
@@ -154,6 +158,23 @@ body {
                             @extend %manga-box;
 
                             a {
+                                h5 {
+                                    @extend %img-h5;
+                                }
+
+                                .star {
+                                    @extend %img-star;
+
+                                    i {
+                                        @extend %img-i;
+                                    }
+                                }
+
+                                .genero {
+                                    @extend %img-genero;
+                                }
+
+
                                 img {
                                     @extend %manga-img;
                                 }
@@ -263,23 +284,22 @@ body {
             }
 
             &__top-10 {
-                h2 {
-                    background-color: $color-primario-opavity;
-                    text-align: center;
+                width: 100%;
+
+                .h2-usuario {
+                    background-color: $color-primario-opacity;
                 }
 
-                &__top-todo {
+                .top-10-n {
                     background-color: $color-secundario-opacity;
 
-                    &__div {
-                        &__n {
-                            text-align: center;
-                            background-color: $color-primario-opavity;
-                            color: #000;
-                            display: inline-block;
-                            padding-left: 5px;
-                            width: 50px;
-                            font-size: 30px;
+                    div {
+                        .aside-top-1 {
+                            color: gold;
+                        }
+
+                        .aside__top-10__n {
+                            @extend %aside-n-div;
                         }
 
                         b {
@@ -288,14 +308,13 @@ body {
                             }
 
                             a:hover {
-                                color: gold;
-                                transition: 0.8s;
+                                @extend %aside-l-a;
                             }
                         }
-
                     }
                 }
             }
+
         }
     }
 
@@ -398,6 +417,22 @@ body {
                             @extend %manga-box;
 
                             a {
+                                h5 {
+                                    @extend %img-h5;
+                                }
+
+                                .star {
+                                    @extend %img-star;
+
+                                    i {
+                                        @extend %img-i;
+                                    }
+                                }
+
+                                .genero {
+                                    @extend %img-genero;
+                                }
+
                                 img {
                                     @extend %manga-img;
                                 }
@@ -537,7 +572,7 @@ body {
             max-width: 100%;
 
             .main-biblioteca__aside {
-                background-color: $color-secundario-opacity;
+
                 display: map-get($map: $biblioteca__aside, $key: biblioteca-display);
                 width: map-get($map: $biblioteca__aside, $key: biblioteca-width);
                 margin-top: map-get($map: $biblioteca__aside, $key: biblioteca-margin-top);
@@ -546,6 +581,8 @@ body {
                 grid-area: aside-biblioteca;
 
                 div {
+                    background-color: $color-secundario-opacity;
+
                     .main-biblioteca__aside__h4 {
                         text-align: center;
                         background-color: $color-primario;
@@ -554,24 +591,6 @@ body {
 
                     div {
                         text-align: center;
-                    }
-                }
-
-                div {
-                    div {
-                        .main-biblioteca__aside__h4 {
-                            text-align: center;
-                            background-color: $color-primario;
-                            width: 100%;
-                        }
-                    }
-                }
-
-                div {
-                    .main-biblioteca__aside__h4 {
-                        text-align: center;
-                        background-color: $color-primario;
-                        width: 100%;
                     }
                 }
             }
@@ -603,6 +622,22 @@ body {
                                     @extend %manga-box;
 
                                     a {
+                                        h5 {
+                                            @extend %img-h5;
+                                        }
+
+                                        .star {
+                                            @extend %img-star;
+
+                                            i {
+                                                @extend %img-i;
+                                            }
+                                        }
+
+                                        .genero {
+                                            @extend %img-genero;
+                                        }
+
                                         img {
                                             @extend %manga-img;
                                         }
@@ -676,6 +711,7 @@ body {
                 div {
                     .formulario {
                         @extend %padding-10px;
+
                         fieldset {
                             text-align: center;
                             background-color: $color-sexto-opacity;
@@ -694,10 +730,12 @@ body {
                                 input {
                                     @extend %input-todos;
                                 }
-                                input:hover{
+
+                                input:hover {
                                     @extend %input-hover;
                                 }
-                                input:focus{
+
+                                input:focus {
                                     @extend %input-focus;
                                 }
                             }
@@ -707,22 +745,28 @@ body {
                                     margin-left: -78px;
                                     @extend %input-todos;
                                 }
-                                input:hover{
+
+                                input:hover {
                                     @extend %input-hover;
                                 }
-                                input:focus{
+
+                                input:focus {
                                     @extend %input-focus;
                                 }
-                                select{
+
+                                select {
                                     @extend %input-todos;
-                                    option{
+
+                                    option {
                                         background-color: $color-sexto-opacity;
                                     }
                                 }
-                                select:hover{
+
+                                select:hover {
                                     @extend %input-hover;
                                 }
-                                select:focus{
+
+                                select:focus {
                                     @extend %input-focus;
                                 }
 
@@ -735,26 +779,29 @@ body {
                                         width: 85%;
                                         @extend %input-todos;
                                     }
-                                    textarea:hover{
+
+                                    textarea:hover {
                                         @extend %input-hover;
                                     }
-                                    textarea:focus{
+
+                                    textarea:focus {
                                         @extend %input-focus;
                                     }
                                 }
                             }
 
-                            
-                                .form-enviar {
-                                    margin-top: 20px;
-                                    margin-bottom: 20px;
-                                    width: 100%;
-                                    @extend %forms-enviar;
-                                }
-                                .form-enviar:hover{
-                                    @extend %buttom-todos-hover;
-                                }
-                            
+
+                            .form-enviar {
+                                margin-top: 20px;
+                                margin-bottom: 20px;
+                                width: 100%;
+                                @extend %forms-enviar;
+                            }
+
+                            .form-enviar:hover {
+                                @extend %buttom-todos-hover;
+                            }
+
                         }
                     }
                 }
@@ -763,13 +810,37 @@ body {
     }
 }
 
+/*todo manga img*/
 .cap-img-body {
     display: inline-block;
+
+    header {
+        div {
+            nav {
+                div {
+                    .navbar-collapse {
+                        ul {
+                            .header-nav-0 {
+                                padding-right: 20px;
+
+                                a {
+                                    .h-i-1 {
+                                        transform: rotate(90deg);
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     main {
         .cap-t {
             text-align: center;
-            background-color: $color-quinto;
+            background-color: $color-quinto-opacity;
 
             h2 {
                 color: $color-negro;
@@ -780,6 +851,7 @@ body {
                 justify-content: center;
 
                 span {
+                    padding-left: 10px;
                     color: $color-azul;
                 }
             }
@@ -791,11 +863,33 @@ body {
             }
         }
 
-        .siguiente-cap {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px;
-            background-color: $color-sexto;
+        .botones-de-cambio {
+            @extend %box-button;
+            background-color: $color-secundario-opacity;
+
+            .anterior {
+                @extend %buttom-todos;
+
+                i {
+                    @extend %i-buttom-1;
+                }
+            }
+
+            .anterior:hover {
+                @extend %buttom-todos-hover;
+            }
+
+            .siguiente {
+                @extend %buttom-todos;
+
+                i {
+                    @extend %i-buttom-2;
+                }
+            }
+
+            .siguiente:hover {
+                @extend %buttom-todos-hover;
+            }
         }
     }
 
@@ -830,8 +924,10 @@ body {
                 height: 250px;
                 margin-top: 50px;
                 margin-bottom: 50px;
+
                 .formulario {
                     @extend %padding-10px;
+
                     fieldset {
                         text-align: center;
                         background-color: $color-sexto-opacity;
@@ -846,20 +942,23 @@ body {
 
                         .apellido-nombre {
                             margin-bottom: 5px;
-                            input{
+
+                            input {
                                 @extend %input-todos;
                             }
-                            input:hover{
+
+                            input:hover {
                                 @extend %input-hover;
                             }
-                            input:focus{
+
+                            input:focus {
                                 @extend %input-focus;
                             }
                         }
 
                         .genero {
-                            label{
-                                color:$color-negro;
+                            label {
+                                color: $color-negro;
                             }
                         }
 
@@ -868,22 +967,28 @@ body {
                                 margin-left: -80px;
                                 @extend %input-todos;
                             }
-                            input:hover{
+
+                            input:hover {
                                 @extend %input-hover;
                             }
-                            input:focus{
+
+                            input:focus {
                                 @extend %input-focus;
                             }
-                            select{
+
+                            select {
                                 @extend %input-todos;
-                                option{
+
+                                option {
                                     background-color: $color-sexto-opacity;
                                 }
                             }
-                            select:hover{
+
+                            select:hover {
                                 @extend %input-hover;
                             }
-                            select:focus{
+
+                            select:focus {
                                 @extend %input-focus;
                             }
 
@@ -901,17 +1006,19 @@ body {
                                 }
                             }
                         }
-                        .box-enviar{
-                            
-                        .form-enviar {
-                            margin-top: 20px;
-                            margin-bottom: 20px;
-                            width: 100%;
-                            @extend %forms-enviar;
-                        }
-                        .form-enviar:hover{
-                            @extend %buttom-todos-hover;
-                        }
+
+                        .box-enviar {
+
+                            .form-enviar {
+                                margin-top: 20px;
+                                margin-bottom: 20px;
+                                width: 100%;
+                                @extend %forms-enviar;
+                            }
+
+                            .form-enviar:hover {
+                                @extend %buttom-todos-hover;
+                            }
                         }
                     }
                 }
@@ -947,38 +1054,114 @@ body {
             flex-wrap: nowrap;
             grid-area: div-descripsion;
             margin-bottom: 50px;
-            margin-top:20px;
+            margin-top: 20px;
 
             .img {
                 margin-left: 80px;
                 padding: 8px;
                 width: 65%;
-                position: relative;
+                max-width: 320px;
+                //position: relative;
 
-                h4 {
-                    background-color: $color-sexto-opacity;
-                    width: calc(100% - 16px);
-                    position: absolute;
-                    text-align: center;
-                }
+                div {
+                    position: relative;
 
-                img {
-                    width: 100%;
+                    .star-descripcion {
+                        @extend %star-descripcion;
+                        bottom: 48px;
+                        right: 0px;
+
+                        i {
+                            @extend %img-i;
+                        }
+                    }
+
+                    .likes-todo {
+                        z-index: 20;
+                        position: absolute;
+                        display: flex;
+                        justify-content: space-evenly;
+                        bottom: 0px;
+                        background-color: $color-negro-opacity;
+                        width: 100%;
+                        height: 3rem;
+
+                        .like-1 {
+                            color: #34bd2f;
+                            height: 30px;
+                            line-height: 3rem;
+                            cursor: pointer;
+                            float: left;
+                            width: 50%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+
+                            i {
+                                font-size: 1.5rem;
+                                margin-top: 5.7265px;
+                                
+                            }
+                        }
+
+                        .like-2 {
+                            color: #bd362f;
+                            height: 30px;
+                            line-height: 3rem;
+                            cursor: pointer;
+                            float: left;
+                            width: calc(50% - 12px);
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+
+                            i {
+                                font-size: 1.5rem;
+                                margin-top: 5.7265px;
+                            }
+                        }
+                    }
+
+                    h4 {
+                        background-color: $color-sexto-opacity;
+                        width: 100%;
+                        position: absolute;
+                        text-align: center;
+                    }
+
+                    img {
+                        width: 100%;
+                    }
                 }
             }
 
-            div {
-                 padding: 8px;
-                 padding-right: 80px;
-                .historia-titulo {
 
+            .historia-div {
+                padding: 8px;
+                padding-right: 80px;
+
+                .historia-titulo {
                     padding: 8px;
                     width: 100%;
                     background-color: $color-sexto-opacity;
 
                     h2 {
-                        text-align: center;
-                        padding-bottom: 10px;
+                        @extend %historia-h;
+                    }
+
+                    h3 {
+                        @extend %historia-h;
+                    }
+
+                    nav {
+                        ul {
+                            li {
+                                display: inline-block;
+                                background-color: $color-primario-opacity;
+                                padding: 5px;
+                                margin: 5px;
+                            }
+                        }
                     }
                 }
             }
@@ -987,6 +1170,7 @@ body {
         .box-capitulos {
             padding: 8px;
             grid-area: capitulo;
+
             .capitulos {
                 background-color: $color-sexto-opacity;
                 width: 100%;
@@ -1031,7 +1215,8 @@ body {
                 display: grid;
                 grid-template-areas:
                     "chaman eva"
-                    "cora video";
+                    "cora video"
+                    "boton-de-mostrar-mas boton-de-mostrar-mas";
                 background-color: $color-sexto-opacity;
 
                 .chaman {
@@ -1062,6 +1247,28 @@ body {
                     height: 315px;
                     width: 100%;
                     grid-area: video;
+                }
+
+                .boton-de-mostrar-mas {
+                    grid-area: boton-de-mostrar-mas;
+                    @extend %box-button;
+                    justify-content: center;
+
+                    button {
+                        @extend %buttom-todos;
+
+                        .i-1 {
+                            @extend %i-buttom-1;
+                        }
+
+                        .i-2 {
+                            @extend %i-buttom-2;
+                        }
+                    }
+
+                    button:hover {
+                        @extend %buttom-todos-hover;
+                    }
                 }
             }
         }
@@ -1248,24 +1455,37 @@ body {
 
                     .aside__top-10 {
                         .h2-usuario {
-                            background-color: $color-primario-opavity;
+                            background-color: $color-primario-opacity;
                         }
+
 
                         .top-10-n {
                             background-color: $color-secundario-opacity;
 
+
+
                             div {
+
+                                .aside-top-1 {
+                                    color: gold;
+                                }
+
                                 .aside__top-10__n {
-                                    background-color: $color-primario-opavity;
-                                    color: $color-negro;
-                                    display: inline-block;
-                                    padding-left: 5px;
-                                    width: 40px;
-                                    height: 40px;
-                                    font-size: 30px;
+                                    @extend %aside-n-div;
+                                }
+
+                                b {
+                                    a {
+                                        color: $color-letra;
+                                    }
+
+                                    a:hover {
+                                        @extend %aside-l-a;
+                                    }
                                 }
                             }
                         }
+
                     }
                 }
             }
